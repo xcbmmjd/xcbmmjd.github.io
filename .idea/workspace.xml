@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43f8be47-116e-4c72-8f11-b1d5498f161b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/html/KT.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/penhui.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/xcd.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/yaoqinghan.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/goodfenhui.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/serverMon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/starv.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/poster.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/poster.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/KT.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/KT.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/other_poster.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/other_poster.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/penhui.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/penhui.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/the_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/the_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/kt1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/kt2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/kt3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/kt4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/znq.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,6 +68,9 @@
       <workItem from="1564138725838" duration="76000" />
       <workItem from="1564147903788" duration="207000" />
       <workItem from="1564288485256" duration="15237000" />
+      <workItem from="1564310941582" duration="145000" />
+      <workItem from="1564312201555" duration="3755000" />
+      <workItem from="1564316671671" duration="37000" />
     </task>
     <servers />
   </component>
