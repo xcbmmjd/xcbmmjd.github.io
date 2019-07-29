@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43f8be47-116e-4c72-8f11-b1d5498f161b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/goodfenhui.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/goodfenhui.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/other_poster.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/other_poster.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/serverMon.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/serverMon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/starv.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/starv.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/the_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/the_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/zhounianqing.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/zhounianqing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="43f8be47-116e-4c72-8f11-b1d5498f161b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +57,7 @@
       <workItem from="1564312201555" duration="3755000" />
       <workItem from="1564316671671" duration="37000" />
       <workItem from="1564386606375" duration="5450000" />
+      <workItem from="1564399571734" duration="304000" />
     </task>
     <servers />
   </component>
