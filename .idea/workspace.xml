@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43f8be47-116e-4c72-8f11-b1d5498f161b" name="Default Changelist" comment="" />
+    <list default="true" id="43f8be47-116e-4c72-8f11-b1d5498f161b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/html/axjd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/bgs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/rl.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/wt.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/xm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/amazeui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/amazeui.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/other_poster.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/other_poster.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +67,7 @@
       <workItem from="1564316671671" duration="37000" />
       <workItem from="1564386606375" duration="5450000" />
       <workItem from="1564399571734" duration="304000" />
+      <workItem from="1564718056166" duration="3669000" />
     </task>
     <servers />
   </component>
