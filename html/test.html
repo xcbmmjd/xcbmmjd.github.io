@@ -8,182 +8,159 @@
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <link rel="stylesheet" href="../css/layui.css">
 
     <!-- Demo styles -->
     <style>
-        * {
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
             margin: 0;
+            padding: 0;
         }
         .swiper-container {
             width: 100%;
             height: 100%;
-            margin: 30px 0;
         }
         .swiper-slide {
             text-align: center;
-            padding: 0 calc((100vw - 816px) * .15);
-            width: 816px;
-        }
-        .inner figure {
-            width: 100%;
-        }
-        .inner figure img {
-            width: 400px;
-            border-radius: 6px;
-        }
-        .gallery-item-desc {
-            width: 80%;
-            text-align: left;
-            display: inline-block;
-            padding-top: 10px;
-            opacity: 0;
-            transition-duration: 1.2s;
-        }
-        .init .gallery-item-desc {
-            opacity: 1;
-        }
-        .gallery-item-desc h3 {
-            line-height: 1.16667;
-            font-weight: 600;
-            letter-spacing: .009em;
-            color: #111;
-            font-size: 20px;
-        }
-        .gallery-item-desc p {
-            margin-top: 1em;
-            color: #333;
-            font-size: 15px;
-        }
-        .swiper-slide-prev .gallery-item-desc {
-            transform: translateX(-70px);
-        }
-        .swiper-slide-next .gallery-item-desc {
-            transform: translateX(70px);
-        }
-        .swiper-slide-active .gallery-item-desc {
-            opacity: 1;
-            transform: translateX(0);
-        }
+            font-size: 18px;
+            background: #fff;
 
-
-
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
     </style>
 </head>
 <body style="background-color: #FFFFFF">
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide init">
-            <div class="inner" style="margin-top: 120px">
-                <p style="font-size: 100px">海</p>
-                <p style="font-size: 100px">报</p>
-                <p style="font-size: 20px;color: #9F9F9F">Poster</p>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="inner">
-                <figure><img src="../img/2.png"></figure>
-                <div class="gallery-item-desc" style="text-align: center">
-                    <h3 class="typography-label">宣传部的海报</h3>
-                    <p class="typography-body">海报制作是宣传部平时最主要的工作也是最基本的工作，海报的制作经历可以延伸至今后制作的各类作品，对形成个人风格最有帮助,一定要注重海报的设计。</p>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="inner">
-                <figure><img src="../img/poster_1.jpg" style="border: 1px solid #b2b2b2"></figure>
-                <div class="gallery-item-desc" style="text-align: center">
-                    <h3 class="typography-label">海报尺寸</h3>
-                    <p class="typography-body">宣传部制作的海报尺寸均为A3</p>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="inner">
-                <figure><img src="../img/4.png"></figure>
-                <div class="gallery-item-desc" style="text-align: center">
-                    <h3 class="typography-label" >海报基本设计要点</h3>
-                    <p class="typography-body">一般海报的构成是海报标题，
-                        活动时间和地点，协会logo和协会名字，还有一些甲方要
-                        求的文字或者图案，海报本身设计以大标题和排版设计为主，
-                        注意文字的量过多时需要和宣传单区分，只需交代好最重要的信息即可，
-                        花主要心思在标题设计，背景制作和整体排版上， 做到吸引眼球和交代好信息的作用。</p>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="inner">
-                <figure><img src="../img/rl.jpg"></figure>
-                <div class="gallery-item-desc" style="text-align: center">
-                    <h3 class="typography-label">海报设计形式</h3>
-                    <p class="typography-body">海报设计形式主要有三种：(前面展示的基本为1型海报)</p>
-                    <p class="typography-body">1.直接用技术手段完成海报制作。</p>
-                    <p class="typography-body">2.利用摄影工具进行背景采集和制作，然后进行文字排版加工</p>
-                    <p class="typography-body">3.手绘海报。</p>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="inner">
-                <figure><img src="../img/6.jpg" style="border: 1px solid #b2b2b2"></figure>
-                <div class="gallery-item-desc" style="text-align: center">
-                    <h3 class="typography-label">2型海报例子</h3>
-                    <p class="typography-body">旧衣回收后摆拍</p>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="inner">
-                <figure><img src="../img/poster_5.jpeg"></figure>
-                <div class="gallery-item-desc" style="text-align: center">
-                    <h3 class="typography-label">海报起步</h3>
-                    <p class="typography-body">一开始尽量以模仿为主，对设计和排版美观有一定的概念，右上角菜单栏里有一些优质的设计网站，先对海报进行大量的浏览再开始下手。</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="swiper-slide">
-            <div class="inner">
-                <figure><img src="../img/fwyp_4.jpg"></figure>
-                <div class="gallery-item-desc" style="text-align: center">
-                    <h3 class="typography-label">尝试设计</h3>
-                    <p class="typography-body">尽量多方面的去尝试设计方法，找到自己喜欢和适合自己的，可能有些例子觉得自己做出来不可能，其实都是可以的，要有耐心，争取每一次都有进步，尽早形成自己的风格。</p>
-                </div>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="inner" style="margin-top: 60px">
-                <p style="font-size: 70px">工</p>
-                <p style="font-size: 70px">作</p>
-                <p style="font-size: 70px">愉</p>
-                <p style="font-size: 70px">快</p>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+<!-- Swiper -->
+<div style="padding: 30px 30px;text-align: center">
+    <p style="font-size: 50px;font-weight: 400">历年服务月活动作品</p>
+    <p class="am-article-meta" style="font-size: 20px;padding: 10px 5px"></p>
+    <i class="layui-icon layui-icon-templeate-1" style="font-size: 50px;"></i>
 </div>
-<footer  style="height: 100px">
-    <div  style="height: 100px;color: #FFFFFF;background-color: #4E5465">
-        <p style="font-size: 10px;color: #9F9F9F;padding: 20px 0px 0px 20px">© 2019 陈天真.</p>
-        <p style="font-size: 10px;color: #9F9F9F;padding: 10px 0px 0px 20px">All rights reserved.</p>
+<div style="text-align: center" data-am-scrollspy="{animation:'slide-bottom', repeat: false,delay: 100}">
+    <p style="font-size: 40px">2019年</p>
+    <p class="am-article-meta" style="font-size: 20px;padding: 10px 10px">总</p>
+</div>
+
+<div class="am-g" style="text-align: center;padding: 20px 8%">
+    <div class="col-sm-12 col-md-4" alt="" style="padding: 10px 0" data-am-scrollspy="{animation:'slide-left', repeat: false,delay: 100}">
+        <div class="am-thumbnail">
+            <img src="../img/5.jpg" width="350"/>
+            <h3 class="am-thumbnail-caption">总海报 设计者：无敌的王小明</h3>
+        </div>
     </div>
-</footer>
+
+    <div class="col-sm-12 col-md-8" alt="" style="padding: 10px 0" data-am-scrollspy="{animation:'slide-right', repeat: false,delay: 100}">
+        <div class="am-thumbnail">
+            <img src="../img/ph_2.jpeg" />
+            <h3 class="am-thumbnail-caption">总喷绘 设计者：无敌的王小明</h3>
+        </div>
+    </div>
+</div>
+<div style="text-align: center" data-am-scrollspy="{animation:'slide-bottom', repeat: false,delay: 100}">
+    <p class="am-article-meta" style="font-size: 20px;padding: 10px 10px">分</p>
+</div>
+<div class="swiper-container" >
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="text-align: center">
+                <p style="font-size: 30px;font-weight: 200">历年服务月部门海报</p>
+                <i class="layui-icon layui-icon-templeate-1" style="font-size: 50px;"></i>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <p style="font-size: 40px">2019年</p>
+            <p class="am-article-meta" style="font-size: 20px;padding: 20px">设计主理人：阿韦</p>
+        </div>
+        <div class="swiper-slide">
+            <div href="#" class="am-thumbnail" style="width: 80%">
+                <img src="../img/yxfh_2.jpg" alt=""/>
+                <h3 style="color: #9F9F9F">喷绘</h3>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="am-thumbnail" style="width: 30%">
+                <img src="../img/yxfh_1.jpg" />
+                <h3 style="color: #9F9F9F">海报</h3>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="am-thumbnail">
+                <img src="../img/yxfh_3.jpg" alt="" style="width: 60%"/>
+                <h3 style="color: #9F9F9F">签字喷绘</h3>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="am-thumbnail">
+                <img src="../img/yqh_4.JPG" alt="" style="width: 60%"/>
+                <h3 style="color: #9F9F9F">邀请函</h3>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <p style="font-size: 40px">2018年</p>
+            <p class="am-article-meta" style="font-size: 20px;padding: 20px">设计主理人：无敌的王小明</p>
+        </div>
+        <div class="swiper-slide">
+            <div href="#" class="am-thumbnail" style="width: 80%">
+                <img src="../img/ph_5.jpeg" alt=""/>
+                <h3 style="color: #9F9F9F">喷绘</h3>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="am-thumbnail" style="width: 30%">
+                <img src="../img/7.jpg" />
+                <h3 style="color: #9F9F9F">海报</h3>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="am-thumbnail">
+                <img src="../img/yqh_3.JPG" alt="" style="width: 60%"/>
+                <h3 style="color: #9F9F9F">邀请函</h3>
+            </div>
+        </div>
+        <div class="swiper-slide">
+        </div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div>
+        <div class="swiper-slide">别翻了</div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
 <!-- Swiper JS -->
 <script src="../js/swiper.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper('.swiper-container', {
-        speed: 700,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
         },
     });
-
-
 </script>
 </body>
 </html>

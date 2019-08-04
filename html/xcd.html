@@ -63,6 +63,16 @@
             opacity: 1;
             transform: translateX(0);
         }
+        @media only screen and (max-width: 1068px) {
+            .swiper-slide {
+                padding:0 calc((100vw - 576px) * .15);
+                width: 576px;
+            }
+            .gallery-item-desc {
+                padding-top: 41px;
+            }
+        }
+
         .swiper-button-next, .swiper-button-prev {
             top: 40%;
             background-color: rgba(210,210,210,.6);
