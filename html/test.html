@@ -78,31 +78,6 @@
             opacity: 1;
             transform: translateX(0);
         }
-        .swiper-button-next, .swiper-button-prev {
-            top: 40%;
-            background-color: rgba(210,210,210,.6);
-            background-size: 15px 15px;
-            border-radius: 50%;
-            width: 52px;
-            height: 52px;
-            transition: all .5s;
-            outline: none;
-            opacity: 0;
-        }
-        .mouse-hover .swiper-button-next, .mouse-hover .swiper-button-prev {
-            opacity: 1;
-        }
-        .swiper-button-next:hover, .swiper-button-prev:hover {
-            background-color: rgba(210,210,210,.8);
-        }
-        .swiper-button-next {
-
-            right: 20px;
-        }
-        .swiper-button-prev {
-
-            left: 20px;
-        }
     </style>
 </head>
 <body>
@@ -134,6 +109,68 @@
                 </div>
             </div>
         </div>
+        <div class="swiper-slide">
+            <div class="inner">
+                <figure><img src="../img/4.png"></figure>
+                <div class="gallery-item-desc" style="text-align: center">
+                    <h3 class="typography-label" >海报基本设计要点</h3>
+                    <p class="typography-body">一般海报的构成是海报标题，
+                        活动时间和地点，协会logo和协会名字，还有一些甲方要
+                        求的文字或者图案，海报本身设计以大标题和排版设计为主，
+                        注意文字的量过多时需要和宣传单区分，只需交代好最重要的信息即可，
+                        花主要心思在标题设计，背景制作和整体排版上， 做到吸引眼球和交代好信息的作用。</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="inner">
+                <figure><img src="../img/rl.jpg"></figure>
+                <div class="gallery-item-desc" style="text-align: center">
+                    <h3 class="typography-label">海报设计形式</h3>
+                    <p class="typography-body">海报设计形式主要有三种：(前面展示的基本为1型海报)</p>
+                    <p class="typography-body">1.直接用技术手段完成海报制作。</p>
+                    <p class="typography-body">2.利用摄影工具进行背景采集和制作，然后进行文字排版加工</p>
+                    <p class="typography-body">3.手绘海报。</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="inner">
+                <figure><img src="../img/6.jpg" style="border: 1px solid #b2b2b2"></figure>
+                <div class="gallery-item-desc" style="text-align: center">
+                    <h3 class="typography-label">2型海报例子</h3>
+                    <p class="typography-body">旧衣回收后摆拍</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="inner">
+                <figure><img src="../img/poster_5.jpeg"></figure>
+                <div class="gallery-item-desc" style="text-align: center">
+                    <h3 class="typography-label">海报起步</h3>
+                    <p class="typography-body">一开始尽量以模仿为主，对设计和排版美观有一定的概念，右上角菜单栏里有一些优质的设计网站，先对海报进行大量的浏览再开始下手。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="inner">
+                <figure><img src="../img/fwyp_4.jpg"></figure>
+                <div class="gallery-item-desc" style="text-align: center">
+                    <h3 class="typography-label">尝试设计</h3>
+                    <p class="typography-body">尽量多方面的去尝试设计方法，找到自己喜欢和适合自己的，可能有些例子觉得自己做出来不可能，其实都是可以的，要有耐心，争取每一次都有进步，尽早形成自己的风格。</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="inner" style="margin-top: 60px">
+                <p style="font-size: 70px">工</p>
+                <p style="font-size: 70px">作</p>
+                <p style="font-size: 70px">愉</p>
+                <p style="font-size: 70px">快</p>
+            </div>
+        </div>
+    </div>
     </div>
     <!-- Add Arrows -->
     <div class="swiper-button-next"></div>
@@ -152,12 +189,6 @@
             prevEl: '.swiper-button-prev',
         },
     });
-    swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
-        swiper.$el.addClass('mouse-hover');
-    };
-    swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
-        swiper.$el.addClass('mouse-hover');
-    };
 </script>
 </body>
 </html>
