@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/amazeui.min.css">
     <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
 </head>
 <body>
 <div style="padding: 30px 30px;text-align: center">
@@ -41,17 +42,38 @@
             </div>
         </article>
     </div>
-    <div  class="col-sm-12 col-md-3" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 100}" style="padding: 50px 10px">
-        <h1 style="text-align: center;padding: 20px">KT板例子_1</h1>
-        <img class="am-thumbnail" src="../img/kt1.png" alt=""/>
-        <img class="am-thumbnail" src="../img/kt2.png" alt=""/>
+    <div  class="col-sm-12 col-md-6" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 100}" style="margin-top: 20px">
+        <div class="swiper-container" >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="am-thumbnail">
+                        <img src="../img/kt1.png"/>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="am-thumbnail">
+                        <img src="../img/kt2.png"/>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="am-thumbnail">
+                        <img src="../img/kt3.png"/>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="am-thumbnail">
+                        <img src="../img/kt4.png"/>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
 
-    </div>
-    <div  class="col-sm-12 col-md-3" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 100}" style="padding: 50px 10px">
-        <h1 style="text-align: center;padding: 20px">KT板例子_2</h1>
-        <img class="am-thumbnail" src="../img/kt3.png" alt=""/>
-        <img class="am-thumbnail" src="../img/kt4.png" alt=""/>
-    </div>
 </div>
 
 
@@ -61,53 +83,20 @@
         <p style="font-size: 10px;color: #9F9F9F;padding: 10px 0px 0px 20px">All rights reserved.</p>
     </div>
 </footer>
-<button  id="btn" style="position: fixed;bottom: 30px;right: 30px; z-index: 100;border: none;background-color: #9F9F9F;opacity:0.8;"><i class="layui-icon layui-icon-top" style="font-size: 40px;color: #FFFFFF"></i></button>
 <script src="../js/zepto.min.js"></script>
 <script src="../js/amazeui.min.js"></script>
+<script src="../js/swiper.min.js"></script>
 <script>
-    window.onload = function(){
-        var btn = document.getElementById('btn');
-        var timer = null;
-        var isTop = true;
-        //获取页面可视区高度
-        var clientHeight = document.documentElement.clientHeight;
-        console.log(clientHeight)
-
-        //滚动条滚动时触发
-        window.onscroll = function() {
-            //显示回到顶部按钮
-            var osTop = document.documentElement.scrollTop || document.body.scrollTop;
-            if (osTop >= clientHeight) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            };
-            //回到顶部过程中用户滚动滚动条，停止定时器
-            if (!isTop) {
-                clearInterval(timer);
-            };
-            isTop = false;
-
-        };
-
-        btn.onclick = function() {
-            //设置定时器
-            timer = setInterval(function(){
-                //获取滚动条距离顶部高度
-                var osTop = document.documentElement.scrollTop || document.body.scrollTop;
-                console.log('osTop '+osTop);
-                var ispeed = Math.floor(-osTop / 7);
-                console.log('ispeed '+ispeed);
-                document.documentElement.scrollTop = document.body.scrollTop = osTop+ispeed;
-                //到达顶部，清除定时器
-                if (osTop == 0) {
-                    clearInterval(timer);
-                };
-                isTop = true;
-
-            },30);
-        };
-    };
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 </script>
 </body>
 </html>

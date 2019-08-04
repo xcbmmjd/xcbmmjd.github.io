@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layui.css">
 
 </head>
-<body >
+<body>
 <div id="doc-oc-demo2" class="am-offcanvas" style="border: none">
     <div class="am-offcanvas-bar" style="background-color:#4E5465;border: none;">
         <ul class="layui-nav layui-nav-tree" style="width: 270px;">
@@ -59,6 +59,7 @@
                         <h3 class="layui-timeline-title">8月4日</h3>
                         <ul>
                             <li>完成剩余页面</li>
+                            <li>优化部分页面视觉效果</li>
                         </ul>
                     </div>
                 </li>
@@ -131,26 +132,22 @@
         </div>
     </div>
 </div>
-<header  style="align-items: center;padding: 0 20px;height: 60px;background-color:#FFFFFF;">
+<header  style="align-items: center;padding: 10px 20px;height: 50px;filter:alpha(opacity=50);background:rgba(225,255,0,0)">
     <div class="layui-row" style="">
-        <div class="layui-col-xs4 layui-col-md4" style="margin-top: 20px;">
+        <div class="layui-col-xs6 layui-col-md6">
             <span data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}" style="height: 100px;width: 100px"><i class="layui-icon layui-icon-spread-left" style="font-size: 25px;"></i></span>
         </div>
-        <div class="layui-col-xs4 layui-col-md4" style="margin-top: 19px;text-align: center;">
-            <h1>XCK </h1>
-        </div>
-        <div class="layui-col-xs4 layui-col-md4" style="margin-top: 20px;text-align: right;">
 
+        <div class="layui-col-xs6 layui-col-md6" style="text-align: right;">
             <span data-am-offcanvas="{target: '#doc-oc-demo3'}"><i class="layui-icon layui-icon-more-vertical" style="font-size: 25px;"></i></span>
         </div>
     </div>
 </header>
 <section style="background-color:rgb(239,239,239);height: calc(100vh - 60px);display: flex" >
-    <div style="display: flex;padding: 10px;flex: 1">
+    <div style="display: flex;flex: 1">
         <iframe name="main" src="html/the_index.html" frameborder="0" style="flex: 1"></iframe>
     </div>
 </section>
-
 <script src="js/zepto.min.js"></script>
 <script src="js/amazeui.min.js"></script>
 <script src="js/app.js"></script>

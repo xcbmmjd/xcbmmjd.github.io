@@ -1,4 +1,5 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,117 +10,242 @@
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/amazeui.min.css">
     <link rel="stylesheet" href="../css/layui.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <style>
+        * {
+            margin: 0;
+        }
+        .apple-retail {
+            margin: 30px 0;
+        }
+        .swiper-slide {
+            text-align: center;
+            padding: 0 calc((100vw - 816px) * .15);
+            width: 816px;
+        }
+        .inner figure {
+            width: 100%;
+        }
+        .inner figure img {
+            width: 400px;
+            border-radius: 6px;
+        }
+        .gallery-item-desc {
+            width: 80%;
+            text-align: left;
+            display: inline-block;
+            padding-top: 10px;
+            opacity: 0;
+            transition-duration: 1.2s;
+        }
+        .init .gallery-item-desc {
+            opacity: 1;
+        }
+        .gallery-item-desc h3 {
+            line-height: 1.16667;
+            font-weight: 600;
+            letter-spacing: .009em;
+            color: #111;
+            font-size: 20px;
+        }
+        .gallery-item-desc p {
+            margin-top: 1em;
+            color: #333;
+            font-size: 15px;
+        }
+        .swiper-slide-prev .gallery-item-desc {
+            transform: translateX(-70px);
+        }
+        .swiper-slide-next .gallery-item-desc {
+            transform: translateX(70px);
+        }
+        .swiper-slide-active .gallery-item-desc {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        @media only screen and (max-width: 1068px) {
+            .swiper-slide {
+                padding:0 calc((100vw - 576px) * .15);
+                width: 576px;
+            }
+            .gallery-item-desc {
+                padding-top: 41px;
+            }
+        }
+        @media only screen and (max-width: 735px) {
+            .swiper-slide {
+                transform: scale(.9);
+                padding: 0;
+                width: 40vw;
+                margin-left:-50px;
+                min-width: 100px;
+            }
+            .swiper-slide-active {
+                transform: scale(1);
+            }
+            .gallery-item-desc {
+                padding-top: 26px;
+                width: 90%;
+            }
+        }
+        .swiper-button-next, .swiper-button-prev {
+            top: 40%;
+            background-color: rgba(210,210,210,.6);
+            background-size: 15px 15px;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            transition: all .5s;
+            outline: none;
+            opacity: 0;
+        }
+        .mouse-hover .swiper-button-next, .mouse-hover .swiper-button-prev {
+            opacity: 1;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background-color: rgba(210,210,210,.8);
+        }
+        .swiper-button-next {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+            right: 20px;
+        }
+        .swiper-button-prev {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+            left: 20px;
+        }
+        .swiper-container .swiper-button-next.swiper-button-disabled, .swiper-container .swiper-button-prev.swiper-button-disabled {
+            opacity: 0;
+        }
+    </style>
+
 </head>
 <body>
-<div style="padding: 30px 30px;text-align: center">
-    <p style="font-size: 50px;font-weight: 400">海 报</p>
-    <p class="am-article-meta" style="font-size: 20px;padding: 10px 5px">了解海报 </p>
-    <i class="layui-icon layui-icon-list" style="font-size: 50px;"></i>
-</div>
-<div style="padding: 0 20px;text-align: center;background-color:#9F9F9F;height: 50px" data-am-scrollspy="{animation:'slide-bottom', repeat: false,delay: 150}">
-    <span style="font-size: 30px;line-height: 50px;color: #FFFFFF">海报</span>
-</div>
+<div class="apple-retail">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide init">
+                <div class="inner" style="margin-top: 120px">
+                    <p style="font-size: 100px">海</p>
+                    <p style="font-size: 100px">报</p>
+                    <p style="font-size: 20px;color: #9F9F9F">Poster</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <figure><img src="../img/2.png"></figure>
+                    <div class="gallery-item-desc" style="text-align: center">
+                        <h3 class="typography-label">宣传部的海报</h3>
+                        <p class="typography-body">海报制作是宣传部平时最主要的工作也是最基本的工作，海报的制作经历可以延伸至今后制作的各类作品，对形成个人风格最有帮助,一定要注重海报的设计。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <figure><img src="../img/poster_1.jpg" style="border: 1px solid #b2b2b2"></figure>
+                    <div class="gallery-item-desc" style="text-align: center">
+                        <h3 class="typography-label">海报尺寸</h3>
+                        <p class="typography-body">宣传部制作的海报尺寸均为A3</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <figure><img src="../img/4.png"></figure>
+                    <div class="gallery-item-desc" style="text-align: center">
+                        <h3 class="typography-label" >海报基本设计要点</h3>
+                        <p class="typography-body">一般海报的构成是海报标题，
+                            活动时间和地点，协会logo和协会名字，还有一些甲方要
+                            求的文字或者图案，海报本身设计以大标题和排版设计为主，
+                            注意文字的量过多时需要和宣传单区分，只需交代好最重要的信息即可，
+                            花主要心思在标题设计，背景制作和整体排版上， 做到吸引眼球和交代好信息的作用。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <figure><img src="../img/rl.jpg"></figure>
+                    <div class="gallery-item-desc" style="text-align: center">
+                        <h3 class="typography-label">海报设计形式</h3>
+                        <p class="typography-body">海报设计形式主要有三种：(前面展示的基本为1型海报)</p>
+                        <p class="typography-body">1.直接用技术手段完成海报制作。</p>
+                        <p class="typography-body">2.利用摄影工具进行背景采集和制作，然后进行文字排版加工</p>
+                        <p class="typography-body">3.手绘海报。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <figure><img src="../img/6.jpg" style="border: 1px solid #b2b2b2"></figure>
+                    <div class="gallery-item-desc" style="text-align: center">
+                        <h3 class="typography-label">2型海报例子</h3>
+                        <p class="typography-body">旧衣回收后摆拍</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <figure><img src="../img/poster_5.jpeg"></figure>
+                    <div class="gallery-item-desc" style="text-align: center">
+                        <h3 class="typography-label">海报起步</h3>
+                        <p class="typography-body">一开始尽量以模仿为主，对设计和排版美观有一定的概念，右上角菜单栏里有一些优质的设计网站，先对海报进行大量的浏览再开始下手。</p>
+                    </div>
+                </div>
+            </div>
 
-<div class="am-g" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">
-    <div  class="col-sm-12 col-md-6" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 100}">
-        <article class="am-article" style="text-align: center;padding: 50px 0">
-            <div class="am-article-hd" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">
-                <h1 class="am-article-title">宣传部的海报</h1>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <figure><img src="../img/fwyp_4.jpg"></figure>
+                    <div class="gallery-item-desc" style="text-align: center">
+                        <h3 class="typography-label">尝试设计</h3>
+                        <p class="typography-body">尽量多方面的去尝试设计方法，找到自己喜欢和适合自己的，可能有些例子觉得自己做出来不可能，其实都是可以的，要有耐心，争取每一次都有进步，尽早形成自己的风格。</p>
+                    </div>
+                </div>
             </div>
-            <p class="am-article-meta" style="padding: 30px;font-size: 20px;color: #cf2d27" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">海报性质</p>
-            <div class="am-article-bd" style="padding: 0 50px" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">
-                <p class="am-article-lead">海报制作是宣传部平时最主要的工作也是最基本的工作，海报的制作经历可以延伸至今后制作的各类作品，对形成个人风格最有帮助一定要注重海报的设计。</p>
+            <div class="swiper-slide">
+                <div class="inner" style="margin-top: 60px">
+                    <p style="font-size: 70px">工</p>
+                    <p style="font-size: 70px">作</p>
+                    <p style="font-size: 70px">愉</p>
+                    <p style="font-size: 70px">快</p>
+                </div>
             </div>
-            <p class="am-article-meta" style="padding: 30px;font-size: 20px;color: #cf2d27" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">海报尺寸</p>
-            <div class="am-article-bd" style="padding: 0 50px" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">
-                <p class="am-article-lead">宣传部制作的海报尺寸均为A3</p>
-            </div>
-            <p class="am-article-meta" style="padding: 30px;font-size: 20px;color: #cf2d27" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">海报基本设计技巧</p>
-            <div class="am-article-bd" style="padding: 0 50px" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">
-                <p class="am-article-lead">一般海报的构成是海报标题，活动时间和地点，协会logo和协会名字，还有一些甲方要求的文字或者图案要求，海报本身以大标题和排版设计为主，
-                    注意文字的量不要过多（一般非常详细的信息会用在宣传单上），交代好最重要的信息即可，花主要心思在标题设计，背景制作和整体排版上，做到吸引眼球和交代好信息的作用。</p>
-            </div>
-            <p class="am-article-meta" style="padding: 30px;font-size: 20px;color: #cf2d27" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">海报设计形式</p>
-            <div class="am-article-bd" style="padding: 0 50px" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">
-                <p class="am-article-lead">海报设计形式主要有三种：1.直接用技术手段完成海报制作。
-                    2.利用摄影工具进行背景采集和制作，然后进行文字排版加工。
-                    3.手绘海报。
-                </p>
-            </div>
-            <p class="am-article-meta" style="padding: 30px;font-size: 20px;color: #cf2d27"data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">海报起步</p>
-            <div class="am-article-bd" style="padding: 0 50px"data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">
-                <p class="am-article-lead">一开始尽量以模仿为主，对设计和排版美观有一定的概念，右上角菜单栏里有一些优质的设计网站，先对海报进行大量的浏览再开始下手。</p>
-            </div>
-            <p class="am-article-meta" style="padding: 30px;font-size: 20px;color: #cf2d27"data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">设计尝试</p>
-            <div class="am-article-bd" style="padding: 0 50px"data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 150}">
-                <p class="am-article-lead">尽量多方面的去尝试设计方法，找到自己喜欢和适合自己的，可能有些例子觉得自己做出来不可能，其实都是可以的，要有耐心，争取每一次都有进步，尽早形成自己的风格。</p>
-            </div>
-        </article>
-    </div>
-    <div  class="col-sm-12 col-md-3" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 100}" style="padding: 20px 10px">
-        <h1 style="text-align: center;padding: 20px">纯技术制作</h1>
-        <img class="am-thumbnail" src="../img/5.jpg" alt=""/>
-        <img class="am-thumbnail" src="../img/7.jpg" alt=""/>
-    </div>
-    <div  class="col-sm-12 col-md-3" data-am-scrollspy="{animation:'slide-bottom', repeat: false, delay: 100}" style="padding: 20px 10px">
-        <h1 style="text-align: center;padding: 20px">摄影背景拍摄</h1>
-        <img class="am-thumbnail" src="../img/6.jpg" alt=""/>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <!--左箭头-->
+        <div class="swiper-button-next"></div>
+        <!--右箭头-->
     </div>
 </div>
-
-
 <footer  style="height: 100px">
     <div  style="height: 100px;color: #FFFFFF;background-color: #4E5465">
         <p style="font-size: 10px;color: #9F9F9F;padding: 20px 0px 0px 20px">© 2019 陈天真.</p>
         <p style="font-size: 10px;color: #9F9F9F;padding: 10px 0px 0px 20px">All rights reserved.</p>
     </div>
 </footer>
-<button  id="btn" style="position: fixed;bottom: 30px;right: 30px; z-index: 100;border: none;background-color: #9F9F9F;opacity:0.8;"><i class="layui-icon layui-icon-top" style="font-size: 40px;color: #FFFFFF"></i></button>
-<script src="../js/zepto.min.js"></script>
-<script src="../js/amazeui.min.js"></script>
+<!-- Swiper JS -->
+<script src="../js/swiper.min.js"></script>
 <script>
-    window.onload = function(){
-        var btn = document.getElementById('btn');
-        var timer = null;
-        var isTop = true;
-        //获取页面可视区高度
-        var clientHeight = document.documentElement.clientHeight;
-        console.log(clientHeight)
+    var swiper = new Swiper('.swiper-container', {
+        speed: 700,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        allowTouchMove: false,
+        on: {
+            init: function() {
+                this.slides.removeClass('init');
+            },
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
 
-        //滚动条滚动时触发
-        window.onscroll = function() {
-            //显示回到顶部按钮
-            var osTop = document.documentElement.scrollTop || document.body.scrollTop;
-            if (osTop >= clientHeight) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            };
-            //回到顶部过程中用户滚动滚动条，停止定时器
-            if (!isTop) {
-                clearInterval(timer);
-            };
-            isTop = false;
-
-        };
-
-        btn.onclick = function() {
-            //设置定时器
-            timer = setInterval(function(){
-                //获取滚动条距离顶部高度
-                var osTop = document.documentElement.scrollTop || document.body.scrollTop;
-                console.log('osTop '+osTop);
-                var ispeed = Math.floor(-osTop / 7);
-                console.log('ispeed '+ispeed);
-                document.documentElement.scrollTop = document.body.scrollTop = osTop+ispeed;
-                //到达顶部，清除定时器
-                if (osTop == 0) {
-                    clearInterval(timer);
-                };
-                isTop = true;
-
-            },30);
-        };
+    });
+    swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
+        swiper.$el.addClass('mouse-hover');
+    };
+    swiper.$el.parent('.apple-retail')[0].onmouseout = function() {
+        swiper.$el.removeClass('mouse-hover');
     };
 </script>
 </body>
