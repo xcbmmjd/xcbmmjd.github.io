@@ -1,31 +1,158 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="../css/amazeui.min.css">
-    <link rel="stylesheet" href="../css/layui.css">
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            background: #000;
+        }
+        .swiper-slide {
+            font-size: 18px;
+            color:#fff;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 40px 60px;
+        }
+        .parallax-bg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 130%;
+            height: 100%;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center;
+        }
+        .swiper-slide .title {
+            font-size: 41px;
+            font-weight: 300;
+        }
+        .swiper-slide .subtitle {
+            font-size: 21px;
+        }
+        .swiper-slide .text {
+            font-size: 14px;
+            max-width: 400px;
+            line-height: 1.3;
+        }
+
+    </style>
 </head>
 <body>
-<div style="background:linear-gradient(#d4d4d4,#f5cecd)">
-    <div class="am-g" style="text-align: center;padding: 20px 8%">
-        <div class="col-sm-12 col-md-4" alt="" style="padding: 10px 0" data-am-scrollspy="{animation:'slide-bottom', repeat: false,delay: 100}">
-            <div class="am-thumbnail">
-                <img src="../img/bgs.png" width="350"/>
-                <h3 class="am-thumbnail-caption">设计者：王志坤</h3>
+<!-- Swiper -->
+<div class="swiper-container">
+    <div class="parallax-bg" style="background-image:url(../img/zr1.png)" data-swiper-parallax="-23%"></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">MAKE YOUR T-SHIRT COLORFUL</div>
+            <div class="subtitle" data-swiper-parallax="-200">Tie-dyed</div>
+            <div class="text" data-swiper-parallax="-100">
+                <p>Make tie-dyed T-shirts and make yourself more personalized！</p>
             </div>
         </div>
-
+        <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">扎染T恤</div>
+            <div class="subtitle" data-swiper-parallax="-200">扎染</div>
+            <div class="text" data-swiper-parallax="-100">
+                <p>制作扎染T恤，让自己变得更加个性吧！</p>
+            </div>
+        </div>
     </div>
+    <!-- Add Pagination -->
+
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
 </div>
 
+<div class="swiper-container" style="padding: 20px 0">
+    <div class="parallax-bg" style="background-image:url(../img/zr2.jpg)" data-swiper-parallax="-23%"></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">MAKE YOUR T-SHIRT COLORFUL</div>
+            <div class="subtitle" data-swiper-parallax="-200">Tie-dyed</div>
+            <div class="text" data-swiper-parallax="-100">
+                <p>Make tie-dyed T-shirts and make yourself more personalized！</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">扎染T恤</div>
+            <div class="subtitle" data-swiper-parallax="-200">扎染</div>
+            <div class="text" data-swiper-parallax="-100">
+                <p>制作扎染T恤，让自己变得更加个性吧！</p>
+            </div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
 
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
+</div>
 
-<script src="../js/zepto.min.js"></script>
-<script src="../js/amazeui.min.js" charset="utf-8"></script>
+<div class="swiper-container" style="padding: 20px 0">
+    <div class="parallax-bg" style="background-image:url(../img/zr3.png)" data-swiper-parallax="-23%"></div>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300">MAKE YOUR T-SHIRT COLORFUL</div>
+            <div class="subtitle" data-swiper-parallax="-200">Tie-dyed</div>
+            <div class="text" data-swiper-parallax="-100">
+                <p>Make tie-dyed T-shirts and make yourself more personalized！</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="title" data-swiper-parallax="-300" data-swiper-parallax-opacity="0">扎染T恤</div>
+            <div class="subtitle" data-swiper-parallax="-200">扎染</div>
+            <div class="text" data-swiper-parallax="-100">
+                <p>制作扎染T恤，让自己变得更加个性吧！</p>
+            </div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+
+    <!-- Add Navigation -->
+    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-button-next swiper-button-white"></div>
+</div>
+<!-- Swiper JS -->
+<script src="../js/swiper.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        speed: 600,
+        parallax: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
 </body>
 </html>
