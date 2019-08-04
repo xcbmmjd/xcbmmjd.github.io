@@ -21,22 +21,8 @@
         }
         .swiper-slide {
             text-align: center;
-            font-size: 18px;
-            background: #fff;
-
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
+            padding: 0 calc((100vw - 816px) * .15);
+            width: 816px;
         }
         .inner figure {
             width: 100%;
@@ -89,15 +75,25 @@
             outline: none;
 
         }
-
+        .mouse-hover .swiper-button-next, .mouse-hover .swiper-button-prev {
+            opacity: 1;
+        }
         .swiper-button-next:hover, .swiper-button-prev:hover {
             background-color: rgba(210,210,210,.8);
         }
+        .swiper-button-next {
+
+            right: 20px;
+        }
+        .swiper-button-prev {
+
+            left: 20px;
+        }
+
 
     </style>
 </head>
-<body>
-<!-- Swiper -->
+<body style="background-color: #FFFFFF">
 <div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide init">
@@ -213,6 +209,12 @@
             prevEl: '.swiper-button-prev',
         },
     });
+        swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
+            swiper.$el.addClass('mouse-hover');
+        };
+    swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
+        swiper.$el.addClass('mouse-hover');
+    };
 
 </script>
 </body>
