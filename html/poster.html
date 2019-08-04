@@ -227,9 +227,9 @@
 <script>
     var swiper = new Swiper('.swiper-container', {
         speed: 700,
+        parallax: true,
         slidesPerView: 'auto',
         centeredSlides: true,
-        allowTouchMove: false,
         on: {
             init: function() {
                 this.slides.removeClass('init');
@@ -243,9 +243,6 @@
     });
     swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
         swiper.$el.addClass('mouse-hover');
-    };
-    swiper.$el.parent('.apple-retail')[0].onmouseout = function() {
-        swiper.$el.removeClass('mouse-hover');
     };
 </script>
 </body>
