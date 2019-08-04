@@ -64,31 +64,7 @@
             opacity: 1;
             transform: translateX(0);
         }
-        .swiper-button-next, .swiper-button-prev {
-            top: 40%;
-            background-color: rgba(210,210,210,.6);
-            background-size: 15px 15px;
-            border-radius: 50%;
-            width: 52px;
-            height: 52px;
-            transition: all .5s;
-            outline: none;
 
-        }
-        .mouse-hover .swiper-button-next, .mouse-hover .swiper-button-prev {
-            opacity: 1;
-        }
-        .swiper-button-next:hover, .swiper-button-prev:hover {
-            background-color: rgba(210,210,210,.8);
-        }
-        .swiper-button-next {
-
-            right: 20px;
-        }
-        .swiper-button-prev {
-
-            left: 20px;
-        }
 
 
     </style>
@@ -201,9 +177,6 @@
 <script>
     var swiper = new Swiper('.swiper-container', {
         speed: 700,
-        parallax: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
