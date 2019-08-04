@@ -201,7 +201,14 @@
 <script>
     var swiper = new Swiper('.swiper-container', {
         speed: 700,
-
+        parallax: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        on: {
+            init: function() {
+                this.slides.removeClass('init');
+            },
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
