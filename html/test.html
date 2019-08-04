@@ -78,6 +78,22 @@
             opacity: 1;
             transform: translateX(0);
         }
+        .swiper-button-next, .swiper-button-prev {
+            top: 40%;
+            background-color: rgba(210,210,210,.6);
+            background-size: 15px 15px;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            transition: all .5s;
+            outline: none;
+
+        }
+
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background-color: rgba(210,210,210,.8);
+        }
+
     </style>
 </head>
 <body>
@@ -176,7 +192,12 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
 </div>
-
+<footer  style="height: 100px">
+    <div  style="height: 100px;color: #FFFFFF;background-color: #4E5465">
+        <p style="font-size: 10px;color: #9F9F9F;padding: 20px 0px 0px 20px">© 2019 陈天真.</p>
+        <p style="font-size: 10px;color: #9F9F9F;padding: 10px 0px 0px 20px">All rights reserved.</p>
+    </div>
+</footer>
 <!-- Swiper JS -->
 <script src="../js/swiper.min.js"></script>
 
@@ -184,11 +205,15 @@
 <script>
     var swiper = new Swiper('.swiper-container', {
         speed: 700,
+        parallax: true,
+        slidesPerView: 'auto',
+        centeredSlides: true,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
     });
+
 </script>
 </body>
 </html>
