@@ -63,31 +63,7 @@
             opacity: 1;
             transform: translateX(0);
         }
-        @media only screen and (max-width: 1068px) {
-            .swiper-slide {
-                padding:0 calc((100vw - 576px) * .15);
-                width: 576px;
-            }
-            .gallery-item-desc {
-                padding-top: 41px;
-            }
-        }
-        @media only screen and (max-width: 735px) {
-            .swiper-slide {
-                transform: scale(.9);
-                padding: 0;
-                width: 40vw;
-                margin-left:-50px;
-                min-width: 100px;
-            }
-            .swiper-slide-active {
-                transform: scale(1);
-            }
-            .gallery-item-desc {
-                padding-top: 26px;
-                width: 90%;
-            }
-        }
+
         .swiper-button-next, .swiper-button-prev {
             top: 40%;
             background-color: rgba(210,210,210,.6);
@@ -106,16 +82,14 @@
             background-color: rgba(210,210,210,.8);
         }
         .swiper-button-next {
-            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+
             right: 20px;
         }
         .swiper-button-prev {
-            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+
             left: 20px;
         }
-        .swiper-container .swiper-button-next.swiper-button-disabled, .swiper-container .swiper-button-prev.swiper-button-disabled {
-            opacity: 0;
-        }
+
     </style>
 
 </head>
@@ -135,7 +109,7 @@
                     <figure><img src="../img/2.png"></figure>
                     <div class="gallery-item-desc" style="text-align: center">
                         <h3 class="typography-label">宣传部的海报</h3>
-                        <p class="typography-body">海报制作是宣传部平时最主要的工作也是最基本的工作，海报的制作经历可以延伸至今后制作的各类作品，对形成个人风格最有帮助,一定要注重海报的设计。</p>
+                        <p class="subtitle" data-swiper-parallax="-200">海报制作是宣传部平时最主要的工作也是最基本的工作，海报的制作经历可以延伸至今后制作的各类作品，对形成个人风格最有帮助,一定要注重海报的设计。</p>
                     </div>
                 </div>
             </div>

@@ -11,118 +11,153 @@
 
     <!-- Demo styles -->
     <style>
-        html, body {
-            position: relative;
-            height: 100%;
-        }
-        body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color:#000;
+        * {
             margin: 0;
-            padding: 0;
         }
         .swiper-container {
             width: 100%;
-            height: 600px;
-            background: #000;
+            height: 100%;
+            margin: 30px 0;
         }
         .swiper-slide {
+            text-align: center;
             font-size: 18px;
-            color:#fff;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            padding: 40px 60px;
-        }
-        .parallax-bg {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 130%;
-            height: 100%;
-            -webkit-background-size: cover;
-            background-size: cover;
-            background-position: center;
-        }
-        .swiper-slide .title {
-            font-size: 41px;
-            font-weight: 300;
-        }
-        .swiper-slide .subtitle {
-            font-size: 21px;
-        }
-        .swiper-slide .text {
-            font-size: 14px;
-            max-width: 400px;
-            line-height: 1.3;
-        }
+            background: #fff;
 
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .inner figure {
+            width: 100%;
+        }
+        .inner figure img {
+            width: 400px;
+            border-radius: 6px;
+        }
+        .gallery-item-desc {
+            width: 80%;
+            text-align: left;
+            display: inline-block;
+            padding-top: 10px;
+            opacity: 0;
+            transition-duration: 1.2s;
+        }
+        .init .gallery-item-desc {
+            opacity: 1;
+        }
+        .gallery-item-desc h3 {
+            line-height: 1.16667;
+            font-weight: 600;
+            letter-spacing: .009em;
+            color: #111;
+            font-size: 20px;
+        }
+        .gallery-item-desc p {
+            margin-top: 1em;
+            color: #333;
+            font-size: 15px;
+        }
+        .swiper-slide-prev .gallery-item-desc {
+            transform: translateX(-70px);
+        }
+        .swiper-slide-next .gallery-item-desc {
+            transform: translateX(70px);
+        }
+        .swiper-slide-active .gallery-item-desc {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .swiper-button-next, .swiper-button-prev {
+            top: 40%;
+            background-color: rgba(210,210,210,.6);
+            background-size: 15px 15px;
+            border-radius: 50%;
+            width: 52px;
+            height: 52px;
+            transition: all .5s;
+            outline: none;
+            opacity: 0;
+        }
+        .mouse-hover .swiper-button-next, .mouse-hover .swiper-button-prev {
+            opacity: 1;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background-color: rgba(210,210,210,.8);
+        }
+        .swiper-button-next {
+
+            right: 20px;
+        }
+        .swiper-button-prev {
+
+            left: 20px;
+        }
     </style>
 </head>
 <body>
 <!-- Swiper -->
 <div class="swiper-container">
-    <div class="parallax-bg" style="background-image:url(../img/index2.jpeg)" data-swiper-parallax="-23%"></div>
     <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <div class="title" data-swiper-parallax="-300">欢迎来到宣传库</div>
-            <div class="subtitle" data-swiper-parallax="-200" style="margin-top: 10px">WELCOME</div>
-            <div class="text" data-swiper-parallax="-100">
-                <p>这里包罗了历年宣传部的作品</p>
-                <p>工作之前仔细看看，总能找到灵感</p>
-            </div>
-            <div class="text" data-swiper-parallax="-200" style="margin-top: 300px;color: #c7c7c7">
-                <p>*iOS设备升级至iOS 13完整体验网站功能</p>
-                <p>*PC端体验最佳 PC可收藏至浏览器书签</p>
+        <div class="swiper-slide init">
+            <div class="inner" style="margin-top: 120px">
+                <p style="font-size: 100px">海</p>
+                <p style="font-size: 100px">报</p>
+                <p style="font-size: 20px;color: #9F9F9F">Poster</p>
             </div>
         </div>
         <div class="swiper-slide">
-            <div class="title" data-swiper-parallax="-300">欢迎来到宣传库</div>
-            <div class="subtitle" data-swiper-parallax="-200" style="margin-top: 20px">WELCOME</div>
-            <div class="text" data-swiper-parallax="-100">
-                <p>这里还有各种作品的制作规则</p>
-                <p>工作愉快！</p>
+            <div class="inner">
+                <figure><img src="../img/2.png"></figure>
+                <div class="gallery-item-desc" style="text-align: center">
+                    <h3 class="typography-label">宣传部的海报</h3>
+                    <p class="typography-body">海报制作是宣传部平时最主要的工作也是最基本的工作，海报的制作经历可以延伸至今后制作的各类作品，对形成个人风格最有帮助,一定要注重海报的设计。</p>
+                </div>
             </div>
         </div>
         <div class="swiper-slide">
-            <div class="title" data-swiper-parallax="-300">欢迎来到宣传库</div>
-            <div class="subtitle" data-swiper-parallax="-200" style="margin-top: 20px">WELCOME</div>
-            <div class="text" data-swiper-parallax="-100">
-                <p>也许会有小彩蛋</p>
+            <div class="inner">
+                <figure><img src="../img/poster_1.jpg" style="border: 1px solid #b2b2b2"></figure>
+                <div class="gallery-item-desc" style="text-align: center">
+                    <h3 class="typography-label">海报尺寸</h3>
+                    <p class="typography-body">宣传部制作的海报尺寸均为A3</p>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination swiper-pagination-white"></div>
-    <!-- Add Navigation -->
-    <div class="swiper-button-prev swiper-button-white"></div>
-    <div class="swiper-button-next swiper-button-white"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
 </div>
 
-<footer  style="height: 100px">
-    <div  style="height: 100px;color: #FFFFFF;background-color: #4E5465">
-        <p style="font-size: 10px;color: #9F9F9F;padding: 20px 0px 0px 20px">© 2019 陈天真.</p>
-        <p style="font-size: 10px;color: #9F9F9F;padding: 10px 0px 0px 20px">All rights reserved.</p>
-    </div>
-</footer>
 <!-- Swiper JS -->
 <script src="../js/swiper.min.js"></script>
 
 <!-- Initialize Swiper -->
 <script>
     var swiper = new Swiper('.swiper-container', {
-        speed: 600,
-        parallax: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+        speed: 700,
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
     });
+    swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
+        swiper.$el.addClass('mouse-hover');
+    };
+    swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
+        swiper.$el.addClass('mouse-hover');
+    };
 </script>
 </body>
 </html>
