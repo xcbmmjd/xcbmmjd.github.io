@@ -1,46 +1,198 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../css/swiper.min.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/amazeui.min.css">
     <link rel="stylesheet" href="../css/layui.css">
+
+    <!-- Demo styles -->
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper-container-v {
+            background: #eee;
+        }
+    </style>
 </head>
 <body>
-<header class="am-topbar">
-    <h1 class="am-topbar-brand">
-        <a href="#">其他部门作品</a>
-    </h1>
-    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
-
-    <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse" >
-        <ul class="am-nav am-nav-pills am-topbar-nav">
-            <li><a href="../html/axjd.html" target="poster">爱心基地</a></li>
-            <li><a href="../html/bgs.html" target="poster">办公室</a></li>
-            <li><a href="../html/rl.html" target="poster">人力</a></li>
-            <li><a href="../html/wt.html" target="poster">网通</a></li>
-            <li><a href="../html/xm.html" target="poster">项目</a></li>
-        </ul>
+<!-- Swiper -->
+<div class="swiper-container swiper-container-h">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div style="text-align: center">
+                <p style="font-size: 30px;font-weight: 200">其他部门活动作品</p>
+                <i class="layui-icon layui-icon-templeate-1" style="font-size: 50px;"></i>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-container swiper-container-v">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p style="font-size: 30px;font-weight: 200">爱心基地</p>
+                        <p><i class="layui-icon layui-icon-down" style="font-size: 30px;"></i></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="am-thumbnail">
+                            <img src="../img/6.jpg" width="350"/>
+                            <h3 class="am-thumbnail-caption">设计者：陈天真</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="am-thumbnail">
+                            <img src="../img/a1.jpg" width="350"/>
+                            <h3 class="am-thumbnail-caption">设计者：陈天真</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="am-thumbnail">
+                            <img src="../img/a2.jpg" width="350"/>
+                            <h3 class="am-thumbnail-caption">设计者：林点</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">55555555555555</div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-v"></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-container swiper-container-v">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p style="font-size: 30px;font-weight: 200">办公室</p>
+                        <p><i class="layui-icon layui-icon-down" style="font-size: 30px;"></i></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="am-thumbnail">
+                            <img src="../img/bgs.png" width="350"/>
+                            <h3 class="am-thumbnail-caption">设计者：王志坤</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        55555555555555
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-v"></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-container swiper-container-v">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p style="font-size: 30px;font-weight: 200">人力</p>
+                        <p><i class="layui-icon layui-icon-down" style="font-size: 30px;"></i></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="am-thumbnail">
+                            <img src="../img/rl.jpg" width="350"/>
+                            <h3 class="am-thumbnail-caption">设计者：周颖</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">55555555555555</div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-v"></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-container swiper-container-v">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p style="font-size: 30px;font-weight: 200">网通</p>
+                        <p><i class="layui-icon layui-icon-down" style="font-size: 30px;"></i></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="am-thumbnail">
+                            <img src="../img/wt.png" width="350"/>
+                            <h3 class="am-thumbnail-caption">设计者：李宛纯</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">55555555555555</div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-v"></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-container swiper-container-v">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p style="font-size: 30px;font-weight: 200">项目</p>
+                        <p><i class="layui-icon layui-icon-down" style="font-size: 30px;"></i></p>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="am-thumbnail">
+                            <img src="../img/xm.png" width="350"/>
+                            <h3 class="am-thumbnail-caption">设计者：李宛纯</h3>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">55555555555555</div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-v"></div>
+            </div>
+        </div>
     </div>
-</header>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-h"></div>
+</div>
 
-<section style="background-color:white;height: calc(100vh - 60px);display: flex;margin-top: -20px;" >
-    <div style="display: flex;flex: 1">
-        <iframe name="poster" src="../html/axjd.html" frameborder="0" style="flex: 1"></iframe>
-    </div>
-</section>
-<footer  style="height: 100px">
-    <div  style="height: 100px;color: #FFFFFF;background-color: #4E5465">
-        <p style="font-size: 10px;color: #9F9F9F;padding: 20px 0px 0px 20px">© 2019 陈天真.</p>
-        <p style="font-size: 10px;color: #9F9F9F;padding: 10px 0px 0px 20px">All rights reserved.</p>
-    </div>
-</footer>
-<script src="../js/zepto.min.js"></script>
-<script src="../js/amazeui.min.js" charset="utf-8"></script>
+<!-- Swiper JS -->
+<script src="../js/swiper.min.js"></script>
 
+<!-- Initialize Swiper -->
+<script>
+    var swiperH = new Swiper('.swiper-container-h', {
+        spaceBetween: 50,
+        pagination: {
+            el: '.swiper-pagination-h',
+            clickable: true,
+        },
+    });
+    var swiperV = new Swiper('.swiper-container-v', {
+        direction: 'vertical',
+        spaceBetween: 50,
+        pagination: {
+            el: '.swiper-pagination-v',
+            clickable: true,
+        },
+    });
+</script>
 </body>
 </html>
