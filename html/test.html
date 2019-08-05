@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>xck</title>
+    <title>Swiper demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <!-- Link Swiper's CSS -->
@@ -49,94 +49,60 @@
             -webkit-align-items: center;
             align-items: center;
         }
-        .swiper-container-v {
-            background: #eee;
-        }
     </style>
 </head>
 <body>
 <!-- Swiper -->
-<div class="swiper-container swiper-container-h">
+<div class="swiper-container">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div style="text-align: center">
-                <p style="font-size: 30px;font-weight: 200">历年优秀分会评比活动作品</p>
-                <i class="layui-icon layui-icon-templeate-1" style="font-size: 50px;"></i>
+            <p style="font-size: 30px;font-weight: 200">墙面改造计划杂记</p>
+            <p>__</p>
+            <i class="layui-icon layui-icon-next" style="font-size: 20px;"></i>
+        </div>
+        <div class="swiper-slide">
+            <div class="am-thumbnail" style="width: 50%">
+                <img src="../img/qm1.png" />
             </div>
         </div>
         <div class="swiper-slide">
-            <div class="swiper-container swiper-container-v">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <p style="font-size: 40px">2019年</p>
-                        <p class="am-article-meta" style="font-size: 20px;padding: 20px">设计主理人：阿韦</p>
-                        <p><i class="layui-icon layui-icon-down" style="font-size: 30px;"></i></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <div href="#" class="am-thumbnail" style="width: 70%">
-                            <img src="../img/yxfh_2.jpg" alt=""/>
-                            <h3 style="color: #9F9F9F">喷绘</h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="am-thumbnail" style="width: 30%">
-                            <img src="../img/yxfh_1.jpg" />
-                            <h3 style="color: #9F9F9F">海报</h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="am-thumbnail">
-                            <img src="../img/yxfh_3.jpg" alt="" style="width: 60%"/>
-                            <h3 style="color: #9F9F9F">签字喷绘</h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="am-thumbnail">
-                            <img src="../img/yqh_4.JPG" alt="" style="width: 60%"/>
-                            <h3 style="color: #9F9F9F">邀请函</h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">55555555555555</div>
-                </div>
-                <div class="swiper-pagination swiper-pagination-v"></div>
+            <div class="am-thumbnail" style="width: 50%">
+                <img src="../img/qm2.png" />
             </div>
         </div>
         <div class="swiper-slide">
-            <div class="swiper-container swiper-container-v">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <p style="font-size: 40px">2018年</p>
-                        <p class="am-article-meta" style="font-size: 20px;padding: 20px">设计主理人：无敌的王小明</p>
-                        <p><i class="layui-icon layui-icon-down" style="font-size: 30px;"></i></p>
-                    </div>
-                    <div class="swiper-slide">
-                        <div href="#" class="am-thumbnail" style="width: 70%">
-                            <img src="../img/ph_5.jpeg" alt=""/>
-                            <h3 style="color: #9F9F9F">喷绘</h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="am-thumbnail" style="width: 30%">
-                            <img src="../img/7.jpg" />
-                            <h3 style="color: #9F9F9F">海报</h3>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="am-thumbnail">
-                            <img src="../img/yqh_3.JPG" alt="" style="width: 60%"/>
-                            <h3 style="color: #9F9F9F">邀请函</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination swiper-pagination-v"></div>
+            <div class="am-thumbnail" style="width: 50%">
+                <img src="../img/qm3.png" />
             </div>
         </div>
-
-
-
+        <div class="swiper-slide">
+            <div class="am-thumbnail" style="width: 50%">
+                <img src="../img/qm4.jpeg" />
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="am-thumbnail" style="width: 50%">
+                <img src="../img/qm5.jpeg" />
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="am-thumbnail" style="width: 50%">
+                <img src="../img/qm6.png" />
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="am-thumbnail" style="width: 50%">
+                <img src="../img/qm7.png" />
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="am-thumbnail" style="width: 50%">
+                <img src="../img/qm8.png" />
+            </div>
+        </div>
     </div>
-    <!-- Add Pagination -->
-    <div class="swiper-pagination swiper-pagination-h"></div>
+    <!-- Add Scrollbar -->
+    <div class="swiper-scrollbar"></div>
 </div>
 
 <!-- Swiper JS -->
@@ -144,19 +110,10 @@
 
 <!-- Initialize Swiper -->
 <script>
-    var swiperH = new Swiper('.swiper-container-h', {
-        spaceBetween: 50,
-        pagination: {
-            el: '.swiper-pagination-h',
-            clickable: true,
-        },
-    });
-    var swiperV = new Swiper('.swiper-container-v', {
-        direction: 'vertical',
-        spaceBetween: 50,
-        pagination: {
-            el: '.swiper-pagination-v',
-            clickable: true,
+    var swiper = new Swiper('.swiper-container', {
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: true,
         },
     });
 </script>
