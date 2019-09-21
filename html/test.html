@@ -3,119 +3,108 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Swiper demo</title>
+    <title>Renew</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="../css/swiper.min.css">
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="../css/amazeui.min.css">
     <link rel="stylesheet" href="../css/layui.css">
-
-    <!-- Demo styles -->
     <style>
-        html, body {
-            position: relative;
-            height: 100%;
+        .sectionOne{height:600px; overflow:hidden; position:relative; background:white; width:100%; }
+        .sectionOne .titleWords{text-align: center;margin-top: 120px;float:left}
+        .sectionTwo{background-color: whitesmoke;height: 600px;color: black;overflow:hidden;position:relative;}
+        .sectionTwo .introduction{text-align: center;}
+        .sectionTwo .introduction p{color:#999;padding: 5px 0}
+        .sectionThree{background-color: black;overflow:hidden;position:relative;height: 700px;color: white;text-align: center}
+        .sectionThree .pic4{width: 300px}
+        .sectionFour{background-color: white;overflow:hidden;position:relative;height: 1200px;color: black}
+        .box1{background-color: whitesmoke;width: 45%;height: 400px;margin:30px 10px 10px 55px;float: left;overflow: hidden;position:relative;text-align: center}
+        .box2{background-color: whitesmoke;width: 45%;height: 400px;margin:30px 10px 10px 10px;float: left;overflow: hidden;}
+        .box1 img{width:100%;text-align:center;cursor: pointer;transition: all 0.7s;}
+        .box1 img:hover{transform: scale(1.2);}
+        .box1 span{color: #9F9F9F;position: absolute;bottom:13%;right:35%;font-size: 30px}
+        @media screen and (max-width:2048px) {
+            .sectionOne .titleWords{width: 50%}
+            .sectionTwo .introduction{width: 50%;padding:230px 0 0 600px;}
+            .sectionTwo .introduction h3{font-size: 50px}
+            .sectionOne .pic1{height: 550px;float:left;position: absolute;bottom:0;right: 0;}
+            .sectionOne .pic2{display: none}
+            .sectionTwo .pic3{width: 400px;float:left;position: absolute;bottom:0;left: 150px;}
+            .sectionThree .basic h3{padding: 100px 0 0 0;font-size: 50px}
+            .sectionThree .basic .basic-body{padding: 50px 100px 0 100px;text-align: center}
+            .sectionThree .basic h1{padding: 50px 0 0 0;font-size: 70px}
+            .sectionFour .key h3{padding: 100px 0 0 0;font-size: 50px;text-align: center}
         }
-        body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color:#000;
-            margin: 0;
-            padding: 0;
-        }
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
+        @media screen and (max-width:1024px){
+            .sectionTwo .introduction{width: 50%;padding:250px 0 0 450px;}
+            .sectionOne .pic1{height: 400px;float:left;position: absolute;bottom:0;right: 0;}
+            .sectionTwo .pic3{width: 300px;float:left;position: absolute;bottom:0;left: 150px;}
 
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
+        }
+        @media screen and (max-width:790px) {
+            .sectionOne .titleWords{width: 100%}
+            .sectionTwo .introduction{width: 50%;padding:150px 0 0 130px;}
+            .sectionTwo .introduction h3{font-size: 30px}
+            .sectionOne{height: 800px}
+            .sectionTwo{height: 700px}
+            .sectionOne .pic1{display: none}
+            .sectionOne .pic2{display: flex;position: absolute;bottom:0;margin-left: 60px;width: 80%}
+            .sectionTwo .pic3{width: 250px;float:left;position: absolute;bottom:0;text-align: center}
+            .sectionThree{height: 800px}
+            .box1,.box2{width: 100%}
         }
     </style>
 </head>
 <body>
-<!-- Swiper -->
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <p style="font-size: 30px;font-weight: 200">墙面改造计划杂记</p>
-            <p>__</p>
-            <i class="layui-icon layui-icon-next" style="font-size: 20px;"></i>
+<section>
+    <section class="sectionOne">
+        <div class="titleWords">
+                    <p style="font-size: 100px">海</p>
+                    <p style="font-size: 100px">报</p>
+                    <p style="font-size: 20px;color: #9F9F9F">Poster</p>
         </div>
-        <div class="swiper-slide">
-            <div class="am-thumbnail" style="width: 50%">
-                <img src="../img/qm1.png" />
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="am-thumbnail" style="width: 50%">
-                <img src="../img/qm2.png" />
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="am-thumbnail" style="width: 50%">
-                <img src="../img/qm3.png" />
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="am-thumbnail" style="width: 50%">
-                <img src="../img/qm4.jpeg" />
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="am-thumbnail" style="width: 50%">
-                <img src="../img/qm5.jpeg" />
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="am-thumbnail" style="width: 50%">
-                <img src="../img/qm6.png" />
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="am-thumbnail" style="width: 50%">
-                <img src="../img/qm7.png" />
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="am-thumbnail" style="width: 50%">
-                <img src="../img/qm8.png" />
-            </div>
-        </div>
+        <img src="../img/t1.png" class="pic1">
+        <img src="../img/t2.png" class="pic2">
+    </section>
+</section>
+<section class="sectionTwo">
+    <img src="../img/5.jpg" class="pic3">
+    <div class="introduction">
+            <h3>宣传部的海报</h3>
+            <p>海报制作是宣传部平时最主要的工作也是最基本的工作,</p>
+            <p>海报的制作经验可以延伸至今后制作的各类作品,</p>
+            <p>对形成个人风格最有帮助,一定要注重海报的设计。</p>
     </div>
-    <!-- Add Scrollbar -->
-    <div class="swiper-scrollbar"></div>
-</div>
+</section>
+<section class="sectionThree">
+    <div class="basic">
+        <h3>海报设计要点</h3>
+        <p class="basic-body">一般海报的构成是海报标题，
+            活动时间和地点，协会logo，部门logo（由部长选定后添加）和协会名字；</br>
+            海报本身设计围绕标题和文字的排版和变换，背景的合理制作和利用，颜色的合理搭配，图形元素和图片元素的叠加处理,</br>
+            注意文字的量过多时需要和宣传单进行功能性区分。</br>
+                                                    </br>
+            1.不要以"满"为目的去填充海报元素，对于新手来说，做的"满"和"好看"是十分困难的.</br>
+            2.海报元素大小非常重要，新手制作很可能注意不好元素的大小关系，尽量往小了处理，</br>
+            和标题和其他元素之间有明显的区分使海报有层次。
+            </p>
+        <h1>!多看再做!</h1>
+    </div>
+    <img src="../img/logoo.png" class="pic4">
+</section>
+<section class="sectionFour">
+    <div class="key">
+        <h3>海报设计要求</h3>
+    </div>
+    <div class="box-group">
+        <div class="box1">
+            <img src="../img/A3.png" alt=" ">
+            <span>海报尺寸为A3</span>
+        </div>
+        <div class="box2"></div>
+    </div>
+    <div class="box-group">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</section>
 
-<!-- Swiper JS -->
-<script src="../js/swiper.min.js"></script>
-
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            hide: true,
-        },
-    });
-</script>
 </body>
 </html>
