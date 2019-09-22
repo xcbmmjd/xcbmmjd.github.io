@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <title>Renew</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/amazeui.min.css">
     <link rel="stylesheet" href="../css/layui.css">
     <style>
         .sectionOne{height:500px; overflow:hidden; position:relative; background:white; width:100%; }
@@ -15,7 +17,7 @@
         .sectionThree{background-color: black;overflow:hidden;position:relative;height: 600px;color: white;text-align: center}
         @media screen and (max-width:2048px) {
             .sectionOne .titleWords{width: 50%}
-            .sectionTwo .introduction{width: 50%;padding:230px 0 0 700px;}
+            .sectionTwo .introduction{padding:230px 0 0 700px;}
             .sectionTwo .introduction h3{font-size: 50px}
             .sectionTwo .introduction p{font-size: 20px}
             .sectionOne .pic1{height: 300px;float:left;position: absolute;bottom:20%;right: 0;}
@@ -23,12 +25,12 @@
             .sectionThree .basic{padding: 100px 0 0 500px}
             .sectionThree .basic h3{padding: 60px 0 0 0;font-size: 50px}
             .sectionThree .pic4{width: 600px;position: absolute;bottom: 20%;left: 0px}
-            .sectionThree .basic .basic-body{padding: 50px 50px 0 50px;text-align: center}
+            .sectionThree .basic .basic-body{padding: 0px 50px 0 50px;text-align: center}
             .sectionThree .basic h1{padding: 50px 0 0 0;font-size: 70px}
             .sectionFour .key h3{padding: 100px 0 0 0;font-size: 50px;text-align: center}
         }
         @media screen and (max-width:1200px){
-            .sectionTwo .introduction{width: 50%;padding:250px 0 0 540px;}
+            .sectionTwo .introduction{padding:200px 0 0 540px;}
             .sectionOne .pic1{height: 220px;float:left;position: absolute;bottom:30%;right: 0;}
             .sectionTwo .pic3{width:530px;float:left;position: absolute;bottom:25%;left: 0;}
             .sectionThree .pic4{width: 500px;position: absolute;bottom: 25%;left: 0px}
@@ -39,7 +41,7 @@
         @media screen and (max-width:768px){
             .sectionOne .pic1{height: 160px;float:left;position: absolute;bottom:35%;right: 0;}
             .sectionTwo .pic3{width: 380px;float:left;position: absolute;bottom:30%;left: 0;}
-            .sectionTwo .introduction{width: 50%;padding:250px 0 0 380px;}
+            .sectionTwo .introduction{padding:200px 0 0 380px;}
             .sectionThree{height: 500px}
             .sectionThree .pic4{width: 260px}
             .sectionThree .basic{padding: 50px 0 0 400px}
@@ -47,10 +49,10 @@
         }
         @media screen and (max-width:450px) {
             .sectionOne .titleWords{width: 100%}
-            .sectionTwo .introduction{padding:80px 10px 0 40px;width: 80%}
+            .sectionTwo .introduction{padding:80px 10px 0 50px;width: 90%}
             .sectionTwo .introduction h3{font-size: 30px}
-            .sectionOne{height:580px}
-            .sectionTwo{height: 550px}
+            .sectionOne{height:650px}
+            .sectionTwo{height: 650px}
             .sectionOne .pic1{position: absolute;bottom:0;width: 100%}
             .sectionTwo .pic3{width: 100%;float:left;position: absolute;bottom:0;left: 0}
             .sectionThree{height: 650px}
@@ -60,6 +62,44 @@
     </style>
 </head>
 <body>
+<div id="doc-oc-demo2" class="am-offcanvas" style="border: none">
+    <div class="am-offcanvas-bar" style="background-color:#4E5465;border: none;">
+        <ul class="layui-nav layui-nav-tree" style="width: 270px;">
+            <li class="layui-nav-item"><a href="../index.html" ><div class="layui-logo">XCK beta</div></a></li>
+            <li class="layui-nav-item"><a href="../index.html"><h1 class="layui-icon layui-icon-home"> 首页</h1></a></li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;" class="layui-icon layui-icon-template-1"> 作品规格</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="workStart.html" class="layui-icon layui-icon-rate-solid"> 工作的开始</a></dd>
+                    <dd><a href="poster.html" >海报</a></dd>
+                    <dd><a href="xcd.html" >宣传单</a></dd>
+                    <dd><a href="penhui.html" >喷绘</a></dd>
+                    <dd><a href="yaoqinghan.html" >邀请函</a></dd>
+                    <dd><a href="KT.html" >KT板</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;" class="layui-icon layui-icon-picture-fine"> 历年活动作品</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="goodfenhui.html" >优秀分会评比</a></dd>
+                    <dd><a href="serverMon.html" >服务月</a></dd>
+                    <dd><a href="starv.html" >星级志愿者</a></dd>
+                    <dd><a href="zhounianqing.html" >周年庆</a></dd>
+                    <dd><a href="other_poster.html" >其他部门活动</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="zr.html"   class="layui-icon layui-icon-star"> 宣传部活动</a></li>
+            <li class="layui-nav-item"><a href="mrt.html"  class="layui-icon layui-icon-face-smile"> 宣传名人堂</a></li>
+        </ul>
+    </div>
+</div>
+<header  style="align-items: center;padding: 10px 10px 0 10px;height: 50px;filter:alpha(opacity=50);background:rgba(225,255,0,0)">
+    <div class="layui-row" style="">
+        <div class="layui-col-xs6 layui-col-md6">
+            <span data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}" style="height: 100px;width: 100px"><i class="layui-icon layui-icon-spread-left" style="font-size: 25px;"></i></span>
+        </div>
+    </div>
+</header>
 <section>
     <section class="sectionOne">
         <div class="titleWords">
@@ -93,6 +133,21 @@
     </div>
     <img src="../img/ph_3.png" class="pic4">
 </section>
+<section>
+    <div  style="height:130px;width:100%;color: #FFFFFF;background-color: #4E5465;">
+        <p style="font-size: 10px;color: #9F9F9F;padding: 20px 0px 0px 20px">© 2019 陈天真.</p>
+        <p style="font-size: 10px;color: #9F9F9F;padding: 0px 0px 0px 20px">All rights reserved.</p>
+    </div>
+</section>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/amazeui.min.js"></script>
+<script src="../js/app.js"></script>
+<script src="../layui.js" charset="utf-8"></script>
+<script>
+    layui.use('element', function(){
 
+
+    });
+</script>
 </body>
 </html>

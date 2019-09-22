@@ -9,39 +9,75 @@
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/amazeui.min.css">
     <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="shortcut icon" href="img/favicon.ico" />
     <link rel="bookmark"href="img/favicon.ico" />
+    <style>
+        .sectionOne{height:700px; overflow:hidden; position:relative; background:white; width:100%; }
+        .sectionOne img{ width:100%; max-width:100%;}
+        .sectionOne .text{position: absolute;top:30%;left:5%}
+        .sectionOne .text h1{color: white;font-size: 80px}
+        .sectionOne .text p{color: whitesmoke;font-size: 20px;padding: 10px 0}
+        .sectionOne .zhu p{color: white;font-size: 10px;position: absolute;bottom: 4%;left:5%;padding: 20px 0;}
+        @media screen and (max-width:2048px) {
+            .pic2{display: none}
+            .pic4{display: none}
+        }
+        @media screen and (max-width:1200px){
+            .sectionOne{height: 500px}
+            .sectionOne .text{position: absolute;top:20%;left:5%}
+            .sectionOne .text h1{color: white;font-size: 60px}
+            .sectionOne .text p{color: whitesmoke;font-size: 15px;padding: 10px 0}
+            .sectionOne .zhu p{color: white;font-size: 10px;position: absolute;bottom: 4%;left:5%;padding: 20px 0;}
+        }
+        @media screen and (max-width:768px){
+            .sectionOne{height: 400px}
+            .sectionOne .text p{color: whitesmoke;font-size: 15px;padding: 5px 0}
+        }
+        @media screen and (max-width:450px) {
+            .pic1{display: none}
+            .pic2{display: flex}
+            .pic3{display: none}
+            .pic4{display: flex}
+            .sectionOne{height: 400px}
+            .sectionOne .text{position: absolute;top:25%;left:5%}
+            .sectionOne .text h1{color: white;font-size: 30px}
+            .sectionOne .text p{color: whitesmoke;font-size: 1px;padding:5px 0}
+            .sectionOne .zhu p{color: white;font-size: 5px;position: absolute;bottom: 4%;left:5%;padding: 20px 0;}
+
+
+        }
+    </style>
 </head>
 <body>
 <div id="doc-oc-demo2" class="am-offcanvas" style="border: none">
     <div class="am-offcanvas-bar" style="background-color:#4E5465;border: none;">
         <ul class="layui-nav layui-nav-tree" style="width: 270px;">
-            <li class="layui-nav-item"><a href="html/the_index.html" target="main"><div class="layui-logo">XCK beta</div></a></li>
-            <li class="layui-nav-item"><a href=""><h1 class="layui-icon layui-icon-home"> 首页</h1></a></li>
+            <li class="layui-nav-item"><a href="index.html" ><div class="layui-logo">XCK beta</div></a></li>
+            <li class="layui-nav-item"><a href="index.html"><h1 class="layui-icon layui-icon-home"> 首页</h1></a></li>
             <li class="layui-nav-item layui-nav-itemed">
                 <a href="javascript:;" class="layui-icon layui-icon-template-1"> 作品规格</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="html/workStart.html" target="main" class="layui-icon layui-icon-rate-solid"> 工作的开始</a></dd>
-                    <dd><a href="html/poster.html" target="main">海报</a></dd>
-                    <dd><a href="html/xcd.html" target="main">宣传单</a></dd>
-                    <dd><a href="html/penhui.html" target="main">喷绘</a></dd>
-                    <dd><a href="html/yaoqinghan.html" target="main">邀请函</a></dd>
-                    <dd><a href="html/KT.html" target="main">KT板</a></dd>
+                    <dd><a href="html/workStart.html" class="layui-icon layui-icon-rate-solid"> 工作的开始</a></dd>
+                    <dd><a href="html/poster.html" >海报</a></dd>
+                    <dd><a href="html/xcd.html" >宣传单</a></dd>
+                    <dd><a href="html/penhui.html" >喷绘</a></dd>
+                    <dd><a href="html/yaoqinghan.html" >邀请函</a></dd>
+                    <dd><a href="html/KT.html" >KT板</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
                 <a href="javascript:;" class="layui-icon layui-icon-picture-fine"> 历年活动作品</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="html/goodfenhui.html" target="main">优秀分会评比</a></dd>
-                    <dd><a href="html/serverMon.html" target="main">服务月</a></dd>
-                    <dd><a href="html/starv.html" target="main">星级志愿者</a></dd>
-                    <dd><a href="html/zhounianqing.html" target="main">周年庆</a></dd>
-                    <dd><a href="html/other_poster.html" target="main">其他部门活动</a></dd>
+                    <dd><a href="html/goodfenhui.html" >优秀分会评比</a></dd>
+                    <dd><a href="html/serverMon.html" >服务月</a></dd>
+                    <dd><a href="html/starv.html" >星级志愿者</a></dd>
+                    <dd><a href="html/zhounianqing.html" >周年庆</a></dd>
+                    <dd><a href="html/other_poster.html" >其他部门活动</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="html/test.html"  target="main" class="layui-icon layui-icon-note"> 墙绘杂记</a></li>
-            <li class="layui-nav-item"><a href="html/zr.html"  target="main" class="layui-icon layui-icon-star"> 宣传部活动</a></li>
-            <li class="layui-nav-item"><a href="html/mrt.html" target="main" class="layui-icon layui-icon-face-smile"> 宣传名人堂</a></li>
+            <li class="layui-nav-item"><a href="html/zr.html"   class="layui-icon layui-icon-star"> 宣传部活动</a></li>
+            <li class="layui-nav-item"><a href="html/mrt.html"  class="layui-icon layui-icon-face-smile"> 宣传名人堂</a></li>
         </ul>
     </div>
 </div>
@@ -56,6 +92,15 @@
             <legend>开发时间线2019</legend>
         </fieldset>
             <ul class="layui-timeline">
+                <li class="layui-timeline-item">
+                    <i class="layui-icon layui-timeline-axis" style="color: #eda4a2"></i>
+                    <div class="layui-timeline-content layui-text">
+                        <h3 class="layui-timeline-title">9月21日</h3>
+                        <ul>
+                            <li>对30%的页面进行设计的重构,取消了之前局部刷新的形式，重构的页面适应所有大小的屏幕</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="layui-timeline-item">
                     <i class="layui-icon layui-timeline-axis" style="color: #eda4a2"></i>
                     <div class="layui-timeline-content layui-text">
@@ -195,23 +240,41 @@
         <div class="layui-col-xs6 layui-col-md6">
             <span data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}" style="height: 100px;width: 100px"><i class="layui-icon layui-icon-spread-left" style="font-size: 25px;"></i></span>
         </div>
-
         <div class="layui-col-xs6 layui-col-md6" style="text-align: right;">
             <span data-am-offcanvas="{target: '#doc-oc-demo3'}"><i class="layui-icon layui-icon-more-vertical" style="font-size: 25px;"></i></span>
         </div>
     </div>
 </header>
-<section style="background-color:rgb(239,239,239);height: calc(92vh);display: flex" >
-    <div style="display: flex;flex: 1">
-        <iframe name="main" src="html/the_index.html" frameborder="0" style="flex: 1"></iframe>
+<section class="sectionOne">
+    <img src="img/index2.jpeg" alt="" class="pic1">
+    <img src="img/index22.jpeg" alt="" class="pic2">
+    <div class="text">
+        <h1>欢迎来到宣传库</h1>
+        <p>这里有关于工作开始的方方面面,</p>
+        <p>还包罗了目前可以收集到的学长学姐们的作品,</p>
+        <p>工作之前仔细看看，总能找到灵感。</p>
+    </div>
+    <div class="zhu">
+        <p>*对"库"有feature的建议，微博私信@我老婆说了玩游戏就是要赢</p>
     </div>
 </section>
+<section class="sectionTwo">
+    <img src="img/ppt.png" alt="" class="pic3">
 
+    <img src="img/pptt.png" alt="" class="pic4">
+
+</section>
+<section>
+    <div  style="height:130px;width:100%;color: #FFFFFF;background-color: #4E5465;">
+        <p style="font-size: 10px;color: #9F9F9F;padding: 20px 0px 0px 20px">© 2019 陈天真.</p>
+        <p style="font-size: 10px;color: #9F9F9F;padding: 0px 0px 0px 20px">All rights reserved.</p>
+    </div>
+</section>
+<script src="js/swiper.min.js"></script>
 <script src="js/zepto.min.js"></script>
 <script src="js/amazeui.min.js"></script>
 <script src="js/app.js"></script>
 <script src="layui.js" charset="utf-8"></script>
-<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 <script>
     layui.use('element', function(){
 

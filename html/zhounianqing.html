@@ -11,6 +11,44 @@
     <link rel="stylesheet" href="../css/layui.css">
 </head>
 <body style="background-color: #3c3c3c">
+<div id="doc-oc-demo2" class="am-offcanvas" style="border: none">
+    <div class="am-offcanvas-bar" style="background-color:#4E5465;border: none;">
+        <ul class="layui-nav layui-nav-tree" style="width: 270px;">
+            <li class="layui-nav-item"><a href="../index.html" ><div class="layui-logo">XCK beta</div></a></li>
+            <li class="layui-nav-item"><a href="../index.html"><h1 class="layui-icon layui-icon-home"> 首页</h1></a></li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;" class="layui-icon layui-icon-template-1"> 作品规格</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="workStart.html" class="layui-icon layui-icon-rate-solid"> 工作的开始</a></dd>
+                    <dd><a href="poster.html" >海报</a></dd>
+                    <dd><a href="xcd.html" >宣传单</a></dd>
+                    <dd><a href="penhui.html" >喷绘</a></dd>
+                    <dd><a href="yaoqinghan.html" >邀请函</a></dd>
+                    <dd><a href="KT.html" >KT板</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;" class="layui-icon layui-icon-picture-fine"> 历年活动作品</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="goodfenhui.html" >优秀分会评比</a></dd>
+                    <dd><a href="serverMon.html" >服务月</a></dd>
+                    <dd><a href="starv.html" >星级志愿者</a></dd>
+                    <dd><a href="zhounianqing.html" >周年庆</a></dd>
+                    <dd><a href="other_poster.html" >其他部门活动</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="zr.html"   class="layui-icon layui-icon-star"> 宣传部活动</a></li>
+            <li class="layui-nav-item"><a href="mrt.html"  class="layui-icon layui-icon-face-smile"> 宣传名人堂</a></li>
+        </ul>
+    </div>
+</div>
+<header  style="align-items: center;padding: 10px 10px 0 10px;height: 50px;filter:alpha(opacity=50);background:rgba(225,255,0,0)">
+    <div class="layui-row" style="">
+        <div class="layui-col-xs6 layui-col-md6">
+            <span data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}" style="height: 100px;width: 100px"><i class="layui-icon layui-icon-spread-left" style="font-size: 25px;color: white"></i></span>
+        </div>
+    </div>
+</header>
 <div style="padding: 30px 30px;text-align: center">
     <p style="font-size: 50px;font-weight: 400;color: #dddddd">历年周年庆活动作品</p>
     <p class="am-article-meta" style="font-size: 20px;padding: 10px 5px;color: #dddddd"></p>
@@ -83,55 +121,21 @@
         </div>
     </div>
 </div>
-
-
-<button  id="btn" style="position: fixed;bottom: 30px;right: 30px; z-index: 100;border: none;background-color: #9F9F9F;opacity:0.8;"><i class="layui-icon layui-icon-top" style="font-size: 40px;color: #FFFFFF"></i></button>
+<section>
+    <div  style="height:130px;width:100%;color: #FFFFFF;background-color: #4E5465;">
+        <p style="font-size: 10px;color: #9F9F9F;padding: 20px 0px 0px 20px">© 2019 陈天真.</p>
+        <p style="font-size: 10px;color: #9F9F9F;padding: 0px 0px 0px 20px">All rights reserved.</p>
+    </div>
+</section>
 <script src="../js/zepto.min.js"></script>
 <script src="../js/amazeui.min.js"></script>
+<script src="../js/app.js"></script>
+<script src="../layui.js" charset="utf-8"></script>
 <script>
-    window.onload = function(){
-        var btn = document.getElementById('btn');
-        var timer = null;
-        var isTop = true;
-        //获取页面可视区高度
-        var clientHeight = document.documentElement.clientHeight;
-        console.log(clientHeight)
+    layui.use('element', function(){
 
-        //滚动条滚动时触发
-        window.onscroll = function() {
-            //显示回到顶部按钮
-            var osTop = document.documentElement.scrollTop || document.body.scrollTop;
-            if (osTop >= clientHeight) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            };
-            //回到顶部过程中用户滚动滚动条，停止定时器
-            if (!isTop) {
-                clearInterval(timer);
-            };
-            isTop = false;
 
-        };
-
-        btn.onclick = function() {
-            //设置定时器
-            timer = setInterval(function(){
-                //获取滚动条距离顶部高度
-                var osTop = document.documentElement.scrollTop || document.body.scrollTop;
-                console.log('osTop '+osTop);
-                var ispeed = Math.floor(-osTop / 7);
-                console.log('ispeed '+ispeed);
-                document.documentElement.scrollTop = document.body.scrollTop = osTop+ispeed;
-                //到达顶部，清除定时器
-                if (osTop == 0) {
-                    clearInterval(timer);
-                };
-                isTop = true;
-
-            },30);
-        };
-    };
-</script>
+    });
+</script>>
 </body>
 </html>

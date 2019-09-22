@@ -5,13 +5,15 @@
     <meta charset="utf-8">
     <title>Renew</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/amazeui.min.css">
     <link rel="stylesheet" href="../css/layui.css">
     <style>
         .sectionOne{height:600px; overflow:hidden; position:relative; background:white; width:100%; }
-        .sectionOne .titleWords{text-align: center;margin-top: 120px;float:left}
+        .sectionOne .titleWords{text-align: center;margin-top: 90px;float:left}
         .sectionTwo{background-color: whitesmoke;height: 600px;color: black;overflow:hidden;position:relative;}
         .sectionTwo .introduction{text-align: center;}
-        .sectionTwo .introduction p{color:#999;padding: 5px 0}
+        .sectionTwo .introduction p{color:#999;padding: 2px 0}
         .sectionThree{background-color: black;overflow:hidden;position:relative;height: 700px;color: white;text-align: center}
         .sectionThree .pic4{width: 300px}
         .sectionFour{background-color: white;overflow:hidden;position:relative;height: 1200px;color: black}
@@ -33,18 +35,18 @@
         .box4 span{color: #9F9F9F;position: absolute;bottom:13%;right:36%;font-size: 30px;text-align: center}
         @media screen and (max-width:2048px) {
             .sectionOne .titleWords{width: 50%}
-            .sectionTwo .introduction{width: 50%;padding:230px 0 0 600px;}
+            .sectionTwo .introduction{padding:230px 0 0 600px;}
             .sectionTwo .introduction h3{font-size: 50px}
             .sectionOne .pic1{height: 550px;float:left;position: absolute;bottom:0;right: 0;}
             .sectionOne .pic2{display: none}
             .sectionTwo .pic3{width: 400px;float:left;position: absolute;bottom:0;left: 150px;}
-            .sectionThree .basic h3{padding: 100px 0 0 0;font-size: 50px}
-            .sectionThree .basic .basic-body{padding: 50px 50px 0 50px;text-align: center}
-            .sectionThree .basic h1{padding: 50px 0 0 0;font-size: 70px}
+            .sectionThree .basic h3{padding: 50px 0 0 0;font-size: 50px}
+            .sectionThree .basic .basic-body{padding: 50px 50px -100px 50px;text-align: center}
+            .sectionThree .basic h1{padding: 0 0 0 0;font-size: 70px}
             .sectionFour .key h3{padding: 100px 0 0 0;font-size: 50px;text-align: center}
         }
         @media screen and (max-width:1200px){
-            .sectionTwo .introduction{width: 50%;padding:250px 0 0 450px;}
+            .sectionTwo .introduction{padding:250px 0 0 550px;}
             .sectionOne .pic1{height: 450px;float:left;position: absolute;bottom:0;right: 0;}
             .sectionTwo .pic3{width: 350px;float:left;position: absolute;bottom:0;left: 150px;}
             .sectionFour{height: 1000px}
@@ -55,7 +57,7 @@
         @media screen and (max-width:768px){
             .sectionOne .pic1{height: 330px;float:left;}
             .sectionTwo .pic3{width: 300px;float:left;position: absolute;bottom:0;left: 80px;}
-            .sectionTwo .introduction{width: 50%;padding:250px 0 0 380px;}
+            .sectionTwo .introduction{padding:250px 0 0 380px;}
             .sectionFour{height: 2100px}
             .box1,.box2,.box3,.box4{width: 90%;height: 450px;margin:10px 10px 10px 45px}
             .box1 span{position: absolute;bottom:13%;right: 36%}
@@ -64,15 +66,16 @@
             .box4 span{position: absolute;bottom:13%;right: 38%}
         }
         @media screen and (max-width:450px) {
-            .sectionOne .titleWords{width: 100%}
-            .sectionTwo .introduction{padding:80px 10px 0 40px;width: 80%}
+            .sectionOne .titleWords{width: 100%;padding: 0 0 0 0}
+            .sectionTwo .introduction{padding:80px 10px 0 30px;}
             .sectionTwo .introduction h3{font-size: 30px}
-            .sectionOne{height: 650px}
-            .sectionTwo{height: 650px}
+            .sectionOne{height: 700px}
+            .sectionTwo{height: 750px}
             .sectionOne .pic1{display: none}
             .sectionOne .pic2{display: flex;position: absolute;bottom:0;margin-left: 42px;width: 80%}
             .sectionTwo .pic3{width: 250px;float:left;position: absolute;bottom:0;left: 75px}
-            .sectionThree{height: 850px}
+            .sectionThree{height: 950px}
+            .sectionThree .basic .basic-body{padding: 50px 50px 0 50px;text-align: center}
             .sectionFour{height: 1300px}
             .box1,.box2,.box3,.box4{width: 90%;height: 250px;margin:10px 10px 10px 20px}
             .sectionFour .key h3{padding: 50px 0 20px 0;font-size: 40px;text-align: center}
@@ -84,6 +87,44 @@
     </style>
 </head>
 <body>
+<div id="doc-oc-demo2" class="am-offcanvas" style="border: none">
+    <div class="am-offcanvas-bar" style="background-color:#4E5465;border: none;">
+        <ul class="layui-nav layui-nav-tree" style="width: 270px;">
+            <li class="layui-nav-item"><a href="../index.html" ><div class="layui-logo">XCK beta</div></a></li>
+            <li class="layui-nav-item"><a href="../index.html"><h1 class="layui-icon layui-icon-home"> 首页</h1></a></li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a href="javascript:;" class="layui-icon layui-icon-template-1"> 作品规格</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="workStart.html" class="layui-icon layui-icon-rate-solid"> 工作的开始</a></dd>
+                    <dd><a href="poster.html" >海报</a></dd>
+                    <dd><a href="xcd.html" >宣传单</a></dd>
+                    <dd><a href="penhui.html" >喷绘</a></dd>
+                    <dd><a href="yaoqinghan.html" >邀请函</a></dd>
+                    <dd><a href="KT.html" >KT板</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;" class="layui-icon layui-icon-picture-fine"> 历年活动作品</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="goodfenhui.html" >优秀分会评比</a></dd>
+                    <dd><a href="serverMon.html" >服务月</a></dd>
+                    <dd><a href="starv.html" >星级志愿者</a></dd>
+                    <dd><a href="zhounianqing.html" >周年庆</a></dd>
+                    <dd><a href="other_poster.html" >其他部门活动</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="zr.html"   class="layui-icon layui-icon-star"> 宣传部活动</a></li>
+            <li class="layui-nav-item"><a href="mrt.html"  class="layui-icon layui-icon-face-smile"> 宣传名人堂</a></li>
+        </ul>
+    </div>
+</div>
+<header  style="align-items: center;padding: 10px 10px 0 10px;height: 50px;filter:alpha(opacity=50);background:rgba(225,255,0,0)">
+    <div class="layui-row" style="">
+        <div class="layui-col-xs6 layui-col-md6">
+            <span data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}" style="height: 100px;width: 100px"><i class="layui-icon layui-icon-spread-left" style="font-size: 25px;"></i></span>
+        </div>
+    </div>
+</header>
 <section>
     <section class="sectionOne">
         <div class="titleWords">
@@ -99,9 +140,12 @@
     <img src="../img/5.jpg" class="pic3">
     <div class="introduction">
         <h3>宣传部的海报</h3>
-        <p>海报制作是宣传部平时最主要的工作也是最基本的工作,</p>
-        <p>海报的制作经验可以延伸至今后制作的各类作品,</p>
-        <p>对形成个人风格最有帮助,一定要注重海报的设计。</p>
+        <p>海报制作是宣传部平时最主要的工作<br/>
+            也是最基本的工作,</p>
+        <p>海报的制作经验可以<br/>
+            延伸至今后制作的各类作品,</p>
+        <p>对形成个人风格最有帮助,<br/>
+            一定要注重海报的设计。</p>
     </div>
 </section>
 <section class="sectionThree">
@@ -116,9 +160,9 @@
             2.海报元素大小非常重要，新手制作很可能注意不好元素的大小关系，尽量往小了处理，</br>
             和标题和其他元素之间有明显的区分使海报有层次。
         </p>
-        <h1>!多看再做!</h1>
     </div>
     <img src="../img/logoo.png" class="pic4">
+    <p style="font-size: 50px">!多看再做!</p>
 </section>
 <section class="sectionFour">
     <div class="key">
@@ -145,6 +189,23 @@
         </div>
     </div>
 </section>
+<section>
+    <div  style="height:130px;width:100%;color: #FFFFFF;background-color: #4E5465;">
+        <p style="font-size: 10px;color: #9F9F9F;padding: 20px 0px 0px 20px">© 2019 陈天真.</p>
+        <p style="font-size: 10px;color: #9F9F9F;padding: 0px 0px 0px 20px">All rights reserved.</p>
+    </div>
+</section>
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/amazeui.min.js"></script>
+<script src="../js/app.js"></script>
+<script src="../layui.js" charset="utf-8"></script>
+<script>
+    layui.use('element', function(){
+
+
+    });
+</script>
 
 </body>
 </html>
