@@ -2,192 +2,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>喷绘</title>
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <meta charset="utf-8">
+    <title>Renew</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../css/layui.css">
-    <link rel="stylesheet" href="../css/swiper.min.css">
     <style>
-        * {
-            margin: 0;
+        .sectionOne{height:500px; overflow:hidden; position:relative; background:white; width:100%; }
+        .sectionOne .titleWords{text-align: center;margin-top: 80px;float:left}
+        .sectionTwo{background-color: whitesmoke;height: 600px;color: black;overflow:hidden;position:relative;}
+        .sectionTwo .introduction{text-align: center;}
+        .sectionTwo .introduction p{color:#999;padding: 5px 0}
+        .sectionThree{background-color: black;overflow:hidden;position:relative;height: 600px;color: white;text-align: center}
+        @media screen and (max-width:2048px) {
+            .sectionOne .titleWords{width: 50%}
+            .sectionTwo .introduction{width: 50%;padding:230px 0 0 700px;}
+            .sectionTwo .introduction h3{font-size: 50px}
+            .sectionTwo .introduction p{font-size: 20px}
+            .sectionOne .pic1{height: 300px;float:left;position: absolute;bottom:20%;right: 0;}
+            .sectionTwo .pic3{width: 700px;float:left;position: absolute;bottom:20%}
+            .sectionThree .basic{padding: 100px 0 0 500px}
+            .sectionThree .basic h3{padding: 60px 0 0 0;font-size: 50px}
+            .sectionThree .pic4{width: 600px;position: absolute;bottom: 20%;left: 0px}
+            .sectionThree .basic .basic-body{padding: 50px 50px 0 50px;text-align: center}
+            .sectionThree .basic h1{padding: 50px 0 0 0;font-size: 70px}
+            .sectionFour .key h3{padding: 100px 0 0 0;font-size: 50px;text-align: center}
         }
-        .apple-retail {
-            margin: 30px 0;
-        }
-        .swiper-slide {
-            text-align: center;
-            padding: 0 calc((100vw - 816px) * .15);
-            width: 816px;
-        }
-        .inner figure {
-            width: 100%;
-        }
-        .inner figure img {
-            width: 80%;
-            border-radius: 6px;
-        }
-        .gallery-item-desc {
-            width: 80%;
-            text-align: left;
-            display: inline-block;
-            padding-top: 10px;
-            opacity: 0;
-            transition-duration: 1.2s;
-        }
-        .init .gallery-item-desc {
-            opacity: 1;
-        }
-        .gallery-item-desc h3 {
-            line-height: 1.16667;
-            font-weight: 600;
-            letter-spacing: .009em;
-            color: #111;
-            font-size: 20px;
-        }
-        .gallery-item-desc p {
-            margin-top: 1em;
-            color: #333;
-            font-size: 15px;
-        }
-        .swiper-slide-prev .gallery-item-desc {
-            transform: translateX(-70px);
-        }
-        .swiper-slide-next .gallery-item-desc {
-            transform: translateX(70px);
-        }
-        .swiper-slide-active .gallery-item-desc {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        @media only screen and (max-width: 1068px) {
-            .swiper-slide {
-                padding:0 calc((100vw - 576px) * .15);
-                width: 576px;
-            }
-            .gallery-item-desc {
-                padding-top: 41px;
-            }
-        }
+        @media screen and (max-width:1200px){
+            .sectionTwo .introduction{width: 50%;padding:250px 0 0 540px;}
+            .sectionOne .pic1{height: 220px;float:left;position: absolute;bottom:30%;right: 0;}
+            .sectionTwo .pic3{width:530px;float:left;position: absolute;bottom:25%;left: 0;}
+            .sectionThree .pic4{width: 500px;position: absolute;bottom: 25%;left: 0px}
+            .sectionThree .basic{padding: 130px 0 0 500px}
 
-        .swiper-button-next, .swiper-button-prev {
-            top: 40%;
-            background-color: rgba(210,210,210,.6);
-            background-size: 15px 15px;
-            border-radius: 50%;
-            width: 52px;
-            height: 52px;
-            transition: all .5s;
-            outline: none;
-            opacity: 0;
+
         }
-        .mouse-hover .swiper-button-next, .mouse-hover .swiper-button-prev {
-            opacity: 1;
+        @media screen and (max-width:768px){
+            .sectionOne .pic1{height: 160px;float:left;position: absolute;bottom:35%;right: 0;}
+            .sectionTwo .pic3{width: 380px;float:left;position: absolute;bottom:30%;left: 0;}
+            .sectionTwo .introduction{width: 50%;padding:250px 0 0 380px;}
+            .sectionThree{height: 500px}
+            .sectionThree .pic4{width: 260px}
+            .sectionThree .basic{padding: 50px 0 0 400px}
+            .sectionThree .pic4{width: 380px;position: absolute;bottom: 25%;left: 0px}
         }
-        .swiper-button-next:hover, .swiper-button-prev:hover {
-            background-color: rgba(210,210,210,.8);
-        }
-        .swiper-button-next {
-            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
-            right: 20px;
-        }
-        .swiper-button-prev {
-            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
-            left: 20px;
-        }
-        .swiper-container .swiper-button-next.swiper-button-disabled, .swiper-container .swiper-button-prev.swiper-button-disabled {
-            opacity: 0;
+        @media screen and (max-width:450px) {
+            .sectionOne .titleWords{width: 100%}
+            .sectionTwo .introduction{padding:80px 10px 0 40px;width: 80%}
+            .sectionTwo .introduction h3{font-size: 30px}
+            .sectionOne{height:580px}
+            .sectionTwo{height: 550px}
+            .sectionOne .pic1{position: absolute;bottom:0;width: 100%}
+            .sectionTwo .pic3{width: 100%;float:left;position: absolute;bottom:0;left: 0}
+            .sectionThree{height: 650px}
+            .sectionThree .basic{padding: 50px 0 0 0px}
+            .sectionThree .pic4{position: absolute;bottom: 0;left: 0px;width: 100%}
         }
     </style>
-
 </head>
 <body>
-<div class="apple-retail">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide init">
-                <div class="inner" style="margin-top: 100px">
-                    <p style="font-size: 100px">喷</p>
-                    <p style="font-size: 100px">绘</p>
-                    <p style="font-size: 20px;color: #9F9F9F">Inkjet printing</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="inner" style="margin-top: 100px">
-                    <figure><img src="../img/ph_1.jpg" style="border: 1px solid #b2b2b2;" ></figure>
-                    <div class="gallery-item-desc" style="text-align: center">
-                        <h3 class="typography-label">宣传部的喷绘</h3>
-                        <p class="typography-body">协会一些需要摆摊性质的活动，用喷绘架在支干路旁支起的大型宣传品。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="inner" style="margin-top: 50px">
-                    <figure><img src="../img/ph_2.png" style="border: 1px solid #b2b2b2"></figure>
-                    <div class="gallery-item-desc" style="text-align: center">
-                        <h3 class="typography-label">喷绘尺寸</h3>
-                        <p class="typography-body">喷绘的尺寸一般由甲方制定,一般较大。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="inner">
-                    <figure><img src="../img/ph_2.jpeg" style="border: 1px solid #b2b2b2"></figure>
-                    <div class="gallery-item-desc" style="text-align: center">
-                        <h3 class="typography-label" >喷绘的设计技巧</h3>
-                        <p class="typography-body">
-                            喷绘的设计是比较困难的一环，因为它比较大，主题要醒目的同时又要保留许多细节，需要制作者有足够多的制作经验，一般从主题入手 设计样式可宏大，也可以以小见大，在有限的元素中尽量展示更多的层次。</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-            <div class="swiper-slide">
-                <div class="inner" style="margin-top: 40px">
-                    <p style="font-size: 70px">工</p>
-                    <p style="font-size: 70px">作</p>
-                    <p style="font-size: 70px">愉</p>
-                    <p style="font-size: 70px">快</p>
-                </div>
-            </div>
+<section>
+    <section class="sectionOne">
+        <div class="titleWords">
+            <p style="font-size: 100px">喷</p>
+            <p style="font-size: 100px">绘</p>
+            <p style="font-size: 20px;color: #9F9F9F">Inkjet printing</p>
         </div>
-        <div class="swiper-button-prev"></div>
-        <!--左箭头-->
-        <div class="swiper-button-next"></div>
-        <!--右箭头-->
+        <img src="../img/ph_1.jpg" class="pic1">
+    </section>
+</section>
+<section class="sectionTwo">
+    <img src="../img/ph_2.png" class="pic3">
+    <div class="introduction">
+        <h3>宣传部的喷绘</h3>
+        <p>协会一些需要摆摊性质的活动，<br/>
+            用喷绘架在支干路旁支起的大型宣传品。<br/>
+            尺寸一般由其他部门自定，<br/>
+            制作的时候考虑电脑性能尽量等比例缩小制作。<br/>
+        </p>
     </div>
-</div>
+</section>
+<section class="sectionThree">
+    <div class="basic">
+        <h3>喷绘的设计要点</h3>
+        <p class="basic-body">喷绘的设计是比较困难的一环，<br/>
+            因为它比较大，主题要醒目的同时又要保留许多细节，<br/>
+            需要制作者有足够多的制作经验，<br/>
+            一般从主题入手,设计样式可宏大，<br/>
+            也可以以小见大，在有限的元素中尽量展示更多的层次。
+        </p>
+    </div>
+    <img src="../img/ph_3.png" class="pic4">
+</section>
 
-<!-- Swiper JS -->
-<script src="../js/swiper.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        speed: 700,
-        parallax: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        on: {
-            init: function() {
-                this.slides.removeClass('init');
-            },
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-    });
-    swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
-        swiper.$el.addClass('mouse-hover');
-    };
-    swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
-        swiper.$el.addClass('mouse-hover');
-    };
-</script>
 </body>
 </html>
