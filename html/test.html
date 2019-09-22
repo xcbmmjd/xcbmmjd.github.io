@@ -7,48 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../css/layui.css">
     <style>
-        .sectionOne{height:600px; overflow:hidden; position:relative; background:white; width:100%; }
-        .sectionOne .titleWords{text-align: center;margin-top: 120px;float:left}
+        .sectionOne{height:500px; overflow:hidden; position:relative; background:white; width:100%; }
+        .sectionOne .titleWords{text-align: center;margin-top: 80px;float:left}
         .sectionTwo{background-color: whitesmoke;height: 600px;color: black;overflow:hidden;position:relative;}
         .sectionTwo .introduction{text-align: center;}
         .sectionTwo .introduction p{color:#999;padding: 5px 0}
-        .sectionThree{background-color: black;overflow:hidden;position:relative;height: 700px;color: white;text-align: center}
-        .sectionThree .pic4{width: 300px}
-        .sectionFour{background-color: white;overflow:hidden;position:relative;height: 1200px;color: black}
-        .box1{background-color: whitesmoke;width: 45%;height: 400px;margin:30px 10px 10px 55px;float: left;overflow: hidden;position:relative;text-align: center}
-        .box2{background-color: whitesmoke;width: 45%;height: 400px;margin:30px 10px 10px 10px;float: left;overflow: hidden;}
-        .box1 img{width:100%;text-align:center;cursor: pointer;transition: all 0.7s;}
-        .box1 img:hover{transform: scale(1.2);}
-        .box1 span{color: #9F9F9F;position: absolute;bottom:13%;right:35%;font-size: 30px}
+        .sectionThree{background-color: black;overflow:hidden;position:relative;height: 600px;color: white;text-align: center}
         @media screen and (max-width:2048px) {
             .sectionOne .titleWords{width: 50%}
-            .sectionTwo .introduction{width: 50%;padding:230px 0 0 600px;}
+            .sectionTwo .introduction{width: 50%;padding:230px 0 0 700px;}
             .sectionTwo .introduction h3{font-size: 50px}
-            .sectionOne .pic1{height: 550px;float:left;position: absolute;bottom:0;right: 0;}
-            .sectionOne .pic2{display: none}
-            .sectionTwo .pic3{width: 400px;float:left;position: absolute;bottom:0;left: 150px;}
-            .sectionThree .basic h3{padding: 100px 0 0 0;font-size: 50px}
-            .sectionThree .basic .basic-body{padding: 50px 100px 0 100px;text-align: center}
+            .sectionTwo .introduction p{font-size: 20px}
+            .sectionOne .pic1{height: 300px;float:left;position: absolute;bottom:20%;right: 0;}
+            .sectionTwo .pic3{width: 700px;float:left;position: absolute;bottom:20%}
+            .sectionThree .basic{padding: 100px 0 0 500px}
+            .sectionThree .basic h3{padding: 60px 0 0 0;font-size: 50px}
+            .sectionThree .pic4{width: 600px;position: absolute;bottom: 20%;left: 0px}
+            .sectionThree .basic .basic-body{padding: 50px 50px 0 50px;text-align: center}
             .sectionThree .basic h1{padding: 50px 0 0 0;font-size: 70px}
             .sectionFour .key h3{padding: 100px 0 0 0;font-size: 50px;text-align: center}
         }
-        @media screen and (max-width:1024px){
-            .sectionTwo .introduction{width: 50%;padding:250px 0 0 450px;}
-            .sectionOne .pic1{height: 400px;float:left;position: absolute;bottom:0;right: 0;}
-            .sectionTwo .pic3{width: 300px;float:left;position: absolute;bottom:0;left: 150px;}
+        @media screen and (max-width:1200px){
+            .sectionTwo .introduction{width: 50%;padding:250px 0 0 540px;}
+            .sectionOne .pic1{height: 220px;float:left;position: absolute;bottom:30%;right: 0;}
+            .sectionTwo .pic3{width:530px;float:left;position: absolute;bottom:25%;left: 0;}
+            .sectionThree .pic4{width: 500px;position: absolute;bottom: 25%;left: 0px}
+            .sectionThree .basic{padding: 130px 0 0 500px}
+
 
         }
-        @media screen and (max-width:790px) {
+        @media screen and (max-width:768px){
+            .sectionOne .pic1{height: 160px;float:left;position: absolute;bottom:35%;right: 0;}
+            .sectionTwo .pic3{width: 380px;float:left;position: absolute;bottom:30%;left: 0;}
+            .sectionTwo .introduction{width: 50%;padding:250px 0 0 380px;}
+            .sectionThree{height: 500px}
+            .sectionThree .pic4{width: 260px}
+            .sectionThree .basic{padding: 50px 0 0 400px}
+            .sectionThree .pic4{width: 380px;position: absolute;bottom: 25%;left: 0px}
+        }
+        @media screen and (max-width:450px) {
             .sectionOne .titleWords{width: 100%}
-            .sectionTwo .introduction{width: 50%;padding:150px 0 0 130px;}
+            .sectionTwo .introduction{padding:80px 10px 0 40px;width: 80%}
             .sectionTwo .introduction h3{font-size: 30px}
-            .sectionOne{height: 800px}
-            .sectionTwo{height: 700px}
-            .sectionOne .pic1{display: none}
-            .sectionOne .pic2{display: flex;position: absolute;bottom:0;margin-left: 60px;width: 80%}
-            .sectionTwo .pic3{width: 250px;float:left;position: absolute;bottom:0;text-align: center}
-            .sectionThree{height: 800px}
-            .box1,.box2{width: 100%}
+            .sectionOne{height:580px}
+            .sectionTwo{height: 550px}
+            .sectionOne .pic1{position: absolute;bottom:0;width: 100%}
+            .sectionTwo .pic3{width: 100%;float:left;position: absolute;bottom:0;left: 0}
+            .sectionThree{height: 650px}
+            .sectionThree .basic{padding: 50px 0 0 0px}
+            .sectionThree .pic4{position: absolute;bottom: 0;left: 0px;width: 100%}
         }
     </style>
 </head>
@@ -56,54 +63,35 @@
 <section>
     <section class="sectionOne">
         <div class="titleWords">
-                    <p style="font-size: 100px">海</p>
-                    <p style="font-size: 100px">报</p>
-                    <p style="font-size: 20px;color: #9F9F9F">Poster</p>
+            <p style="font-size: 100px">喷</p>
+            <p style="font-size: 100px">绘</p>
+            <p style="font-size: 20px;color: #9F9F9F">Inkjet printing</p>
         </div>
-        <img src="../img/t1.png" class="pic1">
-        <img src="../img/t2.png" class="pic2">
+        <img src="../img/ph_1.jpg" class="pic1">
     </section>
 </section>
 <section class="sectionTwo">
-    <img src="../img/5.jpg" class="pic3">
+    <img src="../img/ph_2.png" class="pic3">
     <div class="introduction">
-            <h3>宣传部的海报</h3>
-            <p>海报制作是宣传部平时最主要的工作也是最基本的工作,</p>
-            <p>海报的制作经验可以延伸至今后制作的各类作品,</p>
-            <p>对形成个人风格最有帮助,一定要注重海报的设计。</p>
+        <h3>宣传部的喷绘</h3>
+        <p>协会一些需要摆摊性质的活动，<br/>
+            用喷绘架在支干路旁支起的大型宣传品。<br/>
+            尺寸一般由其他部门自定，<br/>
+            制作的时候考虑电脑性能尽量等比例缩小制作。<br/>
+        </p>
     </div>
 </section>
 <section class="sectionThree">
     <div class="basic">
-        <h3>海报设计要点</h3>
-        <p class="basic-body">一般海报的构成是海报标题，
-            活动时间和地点，协会logo，部门logo（由部长选定后添加）和协会名字；</br>
-            海报本身设计围绕标题和文字的排版和变换，背景的合理制作和利用，颜色的合理搭配，图形元素和图片元素的叠加处理,</br>
-            注意文字的量过多时需要和宣传单进行功能性区分。</br>
-                                                    </br>
-            1.不要以"满"为目的去填充海报元素，对于新手来说，做的"满"和"好看"是十分困难的.</br>
-            2.海报元素大小非常重要，新手制作很可能注意不好元素的大小关系，尽量往小了处理，</br>
-            和标题和其他元素之间有明显的区分使海报有层次。
-            </p>
-        <h1>!多看再做!</h1>
+        <h3>喷绘的设计要点</h3>
+        <p class="basic-body">喷绘的设计是比较困难的一环，<br/>
+            因为它比较大，主题要醒目的同时又要保留许多细节，<br/>
+            需要制作者有足够多的制作经验，<br/>
+            一般从主题入手,设计样式可宏大，<br/>
+            也可以以小见大，在有限的元素中尽量展示更多的层次。
+        </p>
     </div>
-    <img src="../img/logoo.png" class="pic4">
-</section>
-<section class="sectionFour">
-    <div class="key">
-        <h3>海报设计要求</h3>
-    </div>
-    <div class="box-group">
-        <div class="box1">
-            <img src="../img/A3.png" alt=" ">
-            <span>海报尺寸为A3</span>
-        </div>
-        <div class="box2"></div>
-    </div>
-    <div class="box-group">
-        <div class="box1"></div>
-        <div class="box2"></div>
-    </div>
+    <img src="../img/ph_3.png" class="pic4">
 </section>
 
 </body>

@@ -2,202 +2,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>xcd</title>
-    <link rel="stylesheet" href="../css/admin.css">
-    <link rel="stylesheet" href="../css/amazeui.min.css">
+    <meta charset="utf-8">
+    <title>Renew</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="../css/layui.css">
-    <link rel="stylesheet" href="../css/swiper.min.css">
     <style>
-        * {
-            margin: 0;
+        .sectionOne{height:600px; overflow:hidden; position:relative; background:white; width:100%; }
+        .sectionOne .titleWords{text-align: center;margin-top: 80px;float:left}
+        .sectionTwo{background-color: whitesmoke;height: 600px;color: black;overflow:hidden;position:relative;}
+        .sectionTwo .introduction{text-align: center;}
+        .sectionTwo .introduction p{color:#999;padding: 5px 0}
+        .sectionThree{background-color: black;overflow:hidden;position:relative;height: 600px;color: white;text-align: center}
+        .sectionFour{background-color: white;overflow:hidden;position:relative;height: 700px;color: black}
+        .box1{background-color: whitesmoke;width: 45%;height: 400px;margin:30px 10px 10px 55px;float: left;overflow: hidden;position:relative;text-align: center}
+        .box2{background-color: whitesmoke;width: 45%;height: 400px;margin:30px 10px 10px 10px;float: left;overflow: hidden;position:relative;text-align: center}
+        .box1 img{width:100%;text-align:center;cursor: pointer;transition: all 0.7s;}
+        .box1 img:hover{transform: scale(1.2);}
+        .box1 span{color: #9F9F9F;position: absolute;bottom:13%;right:34%;font-size: 30px;text-align: center}
+        .box2 img{width:100%;text-align:center;cursor: pointer;transition: all 0.7s;}
+        .box2 img:hover{transform: scale(1.2);}
+        .box2 span{color: #9F9F9F;position: absolute;bottom:13%;right:35%;font-size: 30px;text-align: center}
+        @media screen and (max-width:2048px) {
+            .sectionOne .titleWords{width: 50%}
+            .sectionTwo .introduction{width: 50%;padding:230px 0 0 600px;}
+            .sectionTwo .introduction h3{font-size: 50px}
+            .sectionTwo .introduction p{font-size: 20px}
+            .sectionOne .pic1{height: 550px;float:left;position: absolute;bottom:0;right: 0;}
+            .sectionOne .pic2{display: none}
+            .sectionTwo .pic3{width: 400px;float:left;position: absolute;bottom:0;left: 150px;}
+            .sectionThree .basic{padding: 100px 0 0 500px}
+            .sectionThree .basic h3{padding: 100px 0 0 0;font-size: 50px}
+            .sectionThree .pic4{width: 350px;position: absolute;bottom: 0;left: 100px}
+            .sectionThree .basic .basic-body{padding: 50px 50px 0 50px;text-align: center}
+            .sectionThree .basic h1{padding: 50px 0 0 0;font-size: 70px}
+            .sectionFour .key h3{padding: 100px 0 0 0;font-size: 50px;text-align: center}
         }
-        .apple-retail {
-            margin: 30px 0;
-        }
-        .swiper-slide {
-            text-align: center;
-            padding: 0 calc((100vw - 816px) * .15);
-            width: 816px;
-        }
-        .inner figure {
-            width: 100%;
-        }
-        .inner figure img {
-            width: 50%;
-            border-radius: 6px;
-        }
-        .gallery-item-desc {
-            display: inline-block;
-            padding-top: 10px;
-            opacity: 0;
-            transition-duration: 1.2s;
-            text-align: center;
-            width: 50%
-        }
-        .init .gallery-item-desc {
-            opacity: 1;
-        }
-        .gallery-item-desc h3 {
-            line-height: 1.16667;
-            font-weight: 600;
-            letter-spacing: .009em;
-            color: #111;
-            font-size: 20px;
-        }
-        .gallery-item-desc p {
-            margin-top: 1em;
-            color: #333;
-            font-size: 15px;
-        }
-        .swiper-slide-prev .gallery-item-desc {
-            transform: translateX(-70px);
-        }
-        .swiper-slide-next .gallery-item-desc {
-            transform: translateX(70px);
-        }
-        .swiper-slide-active .gallery-item-desc {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        @media only screen and (max-width: 1068px) {
-            .swiper-slide {
-                padding:0 calc((100vw - 576px) * .15);
-                width: 576px;
-            }
-            .gallery-item-desc {
-                padding-top: 41px;
-            }
-        }
+        @media screen and (max-width:1200px){
+            .sectionTwo .introduction{width: 50%;padding:250px 0 0 500px;}
+            .sectionOne .pic1{height: 450px;float:left;position: absolute;bottom:0;right: 0;}
+            .sectionTwo .pic3{width: 370px;float:left;position: absolute;bottom:0;left: 120px;}
+            .sectionFour{height: 1000px}
+            .box1,.box2{height: 330px}
+            .box1 span{position: absolute;bottom:13%;right: 30%}
 
-        .swiper-button-next, .swiper-button-prev {
-            top: 40%;
-            background-color: rgba(210,210,210,.6);
-            background-size: 15px 15px;
-            border-radius: 50%;
-            width: 52px;
-            height: 52px;
-            transition: all .5s;
-            outline: none;
-            opacity: 0;
         }
-        .mouse-hover .swiper-button-next, .mouse-hover .swiper-button-prev {
-            opacity: 1;
+        @media screen and (max-width:768px){
+            .sectionOne .pic1{height: 330px;float:left;}
+            .sectionTwo .pic3{width: 260px;float:left;position: absolute;bottom:0;left: 80px;}
+            .sectionTwo .introduction{width: 50%;padding:250px 0 0 380px;}
+            .sectionThree{height: 500px}
+            .sectionThree .pic4{width: 260px}
+            .sectionThree .basic{padding: 50px 0 0 400px}
+            .sectionFour{height: 2100px}
+            .box1,.box2 {width: 90%;height: 450px;margin:10px 10px 10px 45px}
+            .box1 span{position: absolute;bottom:13%;right: 36%}
+            .box2 span{position: absolute;bottom:13%;right: 38%}
         }
-        .swiper-button-next:hover, .swiper-button-prev:hover {
-            background-color: rgba(210,210,210,.8);
-        }
-        .swiper-button-next {
-            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
-            right: 20px;
-        }
-        .swiper-button-prev {
-            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
-            left: 20px;
-        }
-        .swiper-container .swiper-button-next.swiper-button-disabled, .swiper-container .swiper-button-prev.swiper-button-disabled {
-            opacity: 0;
+        @media screen and (max-width:450px) {
+            .sectionOne .titleWords{width: 100%}
+            .sectionTwo .introduction{padding:80px 10px 0 40px;width: 80%}
+            .sectionTwo .introduction h3{font-size: 30px}
+            .sectionOne{height: 650px}
+            .sectionTwo{height: 650px}
+            .sectionOne .pic1{display: none}
+            .sectionOne .pic2{display: flex;position: absolute;bottom:0;margin-left: 42px;width: 80%}
+            .sectionTwo .pic3{width: 250px;float:left;position: absolute;bottom:0;left: 75px}
+            .sectionThree{height: 850px}
+            .sectionThree .basic{padding: 50px 0 0 0px}
+            .sectionThree .pic4{position: absolute;bottom: 0;left: 70px}
+            .sectionFour{height: 700px}
+            .box1,.box2{width: 90%;height: 250px;margin:10px 10px 10px 20px}
+            .sectionFour .key h3{padding: 50px 0 20px 0;font-size: 40px;text-align: center}
+            .box1 span{position: absolute;right: 25%}
+            .box2 span{position: absolute;right: 37%}
         }
     </style>
-
 </head>
 <body>
-<div class="apple-retail">
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide init">
-                <div class="inner" style="margin-top: 120px">
-                    <p style="font-size: 100px">宣</p>
-                    <p style="font-size: 100px">传</p>
-                    <p style="font-size: 100px">单</p>
-                    <p style="font-size: 20px;color: #9F9F9F">Leaflets</p>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="inner">
-                    <figure><img src="../img/xcd_2.jpg" style="border: 1px solid #b2b2b2"></figure>
-                    <div class="gallery-item-desc" style="text-align: center">
-                        <h3 class="typography-label">宣传部的宣传单</h3>
-                        <p class="typography-body">宣传单一般是需要出摊的活动对活动本身进行细致文字描述的宣传品，黑白打印。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="inner">
-                    <figure><img src="../img/xcd_3.jpg" style="border: 1px solid #b2b2b2"></figure>
-                    <div class="gallery-item-desc" style="text-align: center">
-                        <h3 class="typography-label">宣传单的尺寸</h3>
-                        <p class="typography-body">宣传部制作的海报尺寸均为A4</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="inner">
-                    <figure><img src="../img/xcd_1.jpg" style="border: 1px solid #b2b2b2"></figure>
-                    <div class="gallery-item-desc" style="text-align: center">
-                        <h3 class="typography-label" >宣传单设计要点</h3>
-                        <p class="typography-body">
-                            因为宣传单打印以黑白为主，所以制作的时候尽量就以黑白色调为主进行设计，
-                            然后主题内容是活动的具体文字描述，注意文字排版最为主要。
-                            一般设计时以几何图形为辅，如例图。</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="swiper-slide">
-                <div class="inner" style="margin-top: 300px">
-                    <div class="gallery-item-desc" style="text-align: center">
-                    <h3 class="typography-label">宣传单设计起步</h3>
-                    <p class="typography-body">宣传单制作比较简单，注意文字内容不要遗漏，排版美观整洁便可。</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="inner" style="margin-top: 60px">
-                    <p style="font-size: 70px">工</p>
-                    <p style="font-size: 70px">作</p>
-                    <p style="font-size: 70px">愉</p>
-                    <p style="font-size: 70px">快</p>
-                </div>
-            </div>
+<section>
+    <section class="sectionOne">
+        <div class="titleWords">
+            <p style="font-size: 80px">宣</p>
+            <p style="font-size: 80px">传</p>
+            <p style="font-size: 80px">单</p>
+            <p style="font-size: 20px;color: #9F9F9F">Leaflets</p>
         </div>
-        <div class="swiper-button-prev"></div>
-        <!--左箭头-->
-        <div class="swiper-button-next"></div>
-        <!--右箭头-->
+        <img src="../img/t7.png" class="pic1">
+        <img src="../img/t8.png" class="pic2">
+    </section>
+</section>
+<section class="sectionTwo">
+    <img src="../img/xcd_2.jpg" class="pic3">
+    <div class="introduction">
+        <h3>宣传部的宣传单</h3>
+        <p>宣传单是对那种需要出摊的活动</br>
+            进行细致文字描述的宣传品，</p>
+        <p>黑白打印,</p>
+        <p>重排版和灰度调整。</p>
     </div>
-</div>
+</section>
+<section class="sectionThree">
+    <div class="basic">
+        <h3>宣传单设计要点</h3>
+        <p class="basic-body">因为宣传单打印以黑白为主，</br>
+            (因为宣传单量的问题需要降低成本，如果有机会可以做彩色的)</br>
+            所以制作的时候尽量就以黑白色为主进行设计，</br>
+            然后主题内容是活动的具体文字描述，注意文字排版。</br>
+            一般设计时以几何图形为辅，如例图。</br>
+        </p>
+    </div>
+    <img src="../img/xcd_1.jpg" class="pic4">
+</section>
+<section class="sectionFour">
+    <div class="key">
+        <h3>宣传单要求</h3>
+    </div>
+    <div class="box-group">
+        <div class="box1">
+            <img src="../img/A4.png" alt=" ">
+            <span>海报尺寸为A4</span>
+        </div>
+        <div class="box2">
+            <img src="../img/t4.png" alt=" ">
+            <span>很简单</span>
+        </div>
+    </div>
+</section>
 
-<!-- Swiper JS -->
-<script src="../js/swiper.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        speed: 700,
-        parallax: true,
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        on: {
-            init: function() {
-                this.slides.removeClass('init');
-            },
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-    });
-    swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
-        swiper.$el.addClass('mouse-hover');
-    };
-    swiper.$el.parent('.apple-retail')[0].onmouseover = function() {
-        swiper.$el.addClass('mouse-hover');
-    };
-</script>
 </body>
 </html>
