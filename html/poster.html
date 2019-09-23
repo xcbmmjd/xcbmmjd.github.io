@@ -21,18 +21,17 @@
         .box2{background-color: whitesmoke;width: 45%;height: 400px;margin:30px 10px 10px 10px;float: left;overflow: hidden;position:relative;text-align: center}
         .box3{background-color: whitesmoke;width: 45%;height: 400px;margin:30px 10px 10px 55px;float: left;overflow: hidden;position:relative;text-align: center}
         .box4{background-color: whitesmoke;width: 45%;height: 400px;margin:30px 10px 10px 10px;float: left;overflow: hidden;position:relative;text-align: center}
-        .box1 img{width:100%;text-align:center;cursor: pointer;transition: all 0.7s;}
-        .box1 img:hover{transform: scale(1.2);}
+        .box1 img{width:100%;text-align:center;cursor: pointer;}
         .box1 span{color: #9F9F9F;position: absolute;bottom:13%;right:34%;font-size: 30px;text-align: center}
-        .box2 img{width:100%;text-align:center;cursor: pointer;transition: all 0.7s;}
-        .box2 img:hover{transform: scale(1.2);}
-        .box2 span{color: #9F9F9F;position: absolute;bottom:13%;right:35%;font-size: 30px;text-align: center}
-        .box3 img{width:100%;text-align:center;cursor: pointer;transition: all 0.7s;}
-        .box3 img:hover{transform: scale(1.2);}
-        .box3 span{color: #9F9F9F;position: absolute;bottom:13%;right:36%;font-size: 30px;text-align: center}
-        .box4 img{width:100%;text-align:center;cursor: pointer;transition: all 0.7s;}
-        .box4 img:hover{transform: scale(1.2);}
-        .box4 span{color: #9F9F9F;position: absolute;bottom:13%;right:36%;font-size: 30px;text-align: center}
+        .box2 img{width:100%;text-align:center;cursor: pointer;}
+        .box2 span{color: #9F9F9F;position: absolute;bottom:10%;right:35%;font-size: 20px;height:70px;line-height:60px;text-align: center;border:1px solid #9F9F9F;border-radius:45px;width: 30%;transition: all 0.5s;}
+        .box2 span:hover{color:white;border:5px solid white;transition: all 0.5s;}
+        .box3 img{width:100%;text-align:center;cursor: pointer;}
+        .box3 span{color: #9F9F9F;position: absolute;bottom:13%;right:34%;font-size: 20px;height:70px;line-height:60px;text-align: center;border:1px solid #9F9F9F;border-radius:45px;width: 30%;transition: all 0.5s;}
+        .box3 span:hover{color:white;border:5px solid white;transition: all 0.5s;}
+        .box4 img{width:100%;text-align:center;cursor: pointer;}
+        .box4 span{color: #9F9F9F;position: absolute;bottom:13%;right:34%;font-size: 20px;height:70px;line-height:60px;text-align: center;border:1px solid #9F9F9F;border-radius:45px;width: 30%;transition: all 0.5s;}
+        .box4 span:hover{color:white;border:5px solid white;transition: all 0.5s;}
         @media screen and (max-width:2048px) {
             .sectionOne .titleWords{width: 50%}
             .sectionTwo .introduction{padding:230px 0 0 600px;}
@@ -44,6 +43,7 @@
             .sectionThree .basic .basic-body{padding: 50px 50px -100px 50px;text-align: center}
             .sectionThree .basic h1{padding: 0 0 0 0;font-size: 70px}
             .sectionFour .key h3{padding: 100px 0 0 0;font-size: 50px;text-align: center}
+            .pic9{width: 45%;padding: 10px 0 10px 0}
         }
         @media screen and (max-width:1200px){
             .sectionTwo .introduction{padding:250px 0 0 550px;}
@@ -52,7 +52,9 @@
             .sectionFour{height: 1000px}
             .box1,.box2,.box3,.box4{height: 330px}
             .box1 span{position: absolute;bottom:13%;right: 30%}
-
+            .box2 span{position: absolute;bottom:13%;right: 35%;height: 50px;font-size: 15px;line-height:45px;}
+            .box3 span{position: absolute;bottom:13%;right: 35%;height: 50px;font-size: 15px;line-height:45px;}
+            .box4 span{position: absolute;bottom:13%;right: 35%;height: 50px;font-size: 15px;line-height:45px;}
         }
         @media screen and (max-width:768px){
             .sectionOne .pic1{height: 330px;float:left;}
@@ -61,9 +63,9 @@
             .sectionFour{height: 2100px}
             .box1,.box2,.box3,.box4{width: 90%;height: 450px;margin:10px 10px 10px 45px}
             .box1 span{position: absolute;bottom:13%;right: 36%}
-            .box2 span{position: absolute;bottom:13%;right: 38%}
-            .box3 span{position: absolute;bottom:13%;right: 38%}
-            .box4 span{position: absolute;bottom:13%;right: 38%}
+            .box2 span{position: absolute;bottom:13%;right: 36%}
+            .box3 span{position: absolute;bottom:13%;right: 36%}
+            .box4 span{position: absolute;bottom:13%;right: 36%}
         }
         @media screen and (max-width:450px) {
             .sectionOne .titleWords{width: 100%;padding: 0 0 0 0}
@@ -79,10 +81,11 @@
             .sectionFour{height: 1300px}
             .box1,.box2,.box3,.box4{width: 90%;height: 250px;margin:10px 10px 10px 20px}
             .sectionFour .key h3{padding: 50px 0 20px 0;font-size: 40px;text-align: center}
-            .box1 span{position: absolute;right: 25%}
-            .box2 span{position: absolute;right: 28%}
-            .box3 span{position: absolute;right: 28%}
-            .box4 span{position: absolute;right: 28%}
+            .box1 span{position: absolute;right: 32%;font-size: 20px}
+            .box2 span{position: absolute;right: 35%;font-size: 10px}
+            .box3 span{position: absolute;right: 35%;font-size: 10px}
+            .box4 span{position: absolute;right: 35%;font-size: 10px}
+            .pic9{width: 90%;}
         }
     </style>
 </head>
@@ -175,17 +178,79 @@
         </div>
         <div class="box2">
             <img src="../img/t4.png" alt=" ">
-            <span>技术型海报</span>
+            <span data-am-modal="{target: '#doc-modal-1'}"><p class="page">技术型海报</p></span>
         </div>
     </div>
     <div class="box-group">
         <div class="box3">
             <img src="../img/t3.png" alt=" ">
-            <span>摄影型海报</span>
+            <span data-am-modal="{target: '#doc-modal-2'}">摄影型海报</span>
         </div>
         <div class="box4">
             <img src="../img/t6.png" alt=" ">
-            <span>绘画型海报</span>
+            <span data-am-modal="{target: '#doc-modal-3'}">绘画型海报</span>
+        </div>
+    </div>
+
+    <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-1" style="max-height: 500px;overflow-y: auto;">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">技术型海报
+                <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+            </div>
+            <div style="padding:20px 50px 20px 50px;text-align: left" >
+                技术型海报主利用技术手段来实现整个海报的制作，这一类海报需要多看，多琢磨别人做的海报的效果是怎么做到的，第一眼看可能有点困难，其实花心思去研究都可以做到。
+            </div>
+            <div style="text-align: center;">
+                <img src="../img/1.png" alt=""  class="pic9">
+                <img src="../img/hb_1.jpg" alt="" class="pic9">
+            </div>
+            <div style="text-align: center;">
+                <img src="../img/a2.jpg" alt="" class="pic9">
+                <img src="../img/bgs.png" alt=""  class="pic9">
+            </div>
+            <div style="text-align: center;">
+                <img src="../img/4.png" alt="" class="pic9">
+                <img src="../img/5.jpg" alt=""  class="pic9">
+            </div>
+        </div>
+    </div>
+
+    <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-2" style="max-height: 500px;overflow-y: auto;">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">摄影型海报
+                <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+            </div>
+            <div style="padding:20px 50px 20px 50px;text-align: left" >
+                <p>摄影型海报就是根据主题对海报主题进行摄影创作，然后对照片进行一定后期处理，如果会拍基本是万能的风格，鼓励这类海报的制作，有场地方面的困难可以找部长。</p>
+                <p>以下是可以参考的教程：</p>
+                <p><a href="https://www.bilibili.com/video/av62681840" style="font-size: 15px;color: pink;text-decoration:underline">神秘链接一</a></p>
+                <p><a href="https://www.bilibili.com/video/av56392411" style="font-size: 15px;color: pink;text-decoration:underline">神秘链接二</a></p>
+                <p><a href="https://www.bilibili.com/video/av50275691" style="font-size: 15px;color: pink;text-decoration:underline">神秘链接三</a></p>
+                
+            </div>
+            <div class="am-modal-bd">
+                <div style="text-align: center;">
+                    <img src="../img/6.jpg" alt=""  class="pic9">
+                    <img src="../img/fwyp_4.jpg" alt="" class="pic9">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="am-modal am-modal-no-btn" tabindex="-1" id="doc-modal-3" style="max-height: 600px;overflow-y: auto;">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">绘画型海报
+                <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+            </div>
+            <div class="am-modal-bd">
+                有绘画基础的同学或者是想尝试这类创作的同学可以直接在纸上画出海报的主题或者部分，然后用手机的文档扫描软件扫一下，然后扔到电脑上进行二次加工；
+                或者在iPad上使用相关绘画软件直接进行创作，鼓励这类海报的制作！
+            </div>
+            <div class="am-modal-bd">
+                <div style="text-align: center;">
+                    <img src="../img/sh.png" alt="" style="width: 80%">
+                </div>
+            </div>
         </div>
     </div>
 </section>
